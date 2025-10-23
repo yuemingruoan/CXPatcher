@@ -33,13 +33,16 @@ ans so on...
 ## What MacOS does it support
 
 Ventura (13) or newer
-Currently GPTK requires MacOS Sonoma
+Currently GPTK requires MacOS Sonoma or a newer MacOS
 
 ## What does it do?
 
-This patcher will upgrade your CrossOver app with the latest DXVK and MoltenVK
+This patcher will upgrade your CrossOver app with the latest DXVK, D3DMetal (GPTK) and MoltenVK
 patched for improved compatibility, and dramatically extends compatibility with
-Unreal engine 4 games.
+Unreal engine 4 games (in DXVK).
+
+Alternatively you can choose to update DXMT to the lastest (or to a build from the main branch that hasn't been released yet)
+To do that you'll need to download your DXMT preferred build.
 
 ## What does it NOT do?
 
@@ -56,7 +59,7 @@ You need to have an unmodified version of CrossOver, you can download it at:
 [https://www.codeweavers.com/account/downloads](https://www.codeweavers.com/account/downloads).
 Please make sure the app has been registered or ran at least once, to make sure
 the latest DXVK is activated properly. You may need to switch off
-DXVK and on again, if you don't you will need to re-download it. If the
+DXVK and on again (that' the same procedure i recommend with dxmt and d3dmetal too), if you don't you will need to re-download it. If the
 patcher renders the app unusable you can either use the restore function (see
 instructions below) or download it again from the website, it doesn't do any
 permanent modifications to your 'bottles'.
@@ -88,7 +91,7 @@ If you don't like that you can disable it, it's enabled by default as you can se
 
 There are new upcoming technologies developed this year that are capable of
 running DirectX 12 games and now you can have those embedded in CrossOver!
-In order to integrate that in CrossOver you just need switch on "Integrate D3DMetal (GPTK)"
+In order to update D3DMetal to the latest version in CrossOver you just need switch on "Integrate D3DMetal (GPTK)" (now it's on by default)
 
 <img width="300" alt="integrate external resources" src="https://github.com/italomandara/CXPatcher/assets/12135454/0da08a95-5003-46c1-985c-80f2ff6dd256">
 <img width="401" alt="integrate external resources" src="https://github.com/italomandara/CXPatcher/assets/12135454/9f709365-cd25-4d34-a737-6f68ff2bb491">
@@ -99,16 +102,20 @@ In order to integrate that in CrossOver you just need switch on "Integrate D3DMe
 
 ## Restoring a patched app to the original app (unsupported in new versions)
 
-Maybe you changed your mind and prefer to use your original CrossOver app.
-You can restore by going to the `file -> restore menu`
+~Maybe you changed your mind and prefer to use your original CrossOver app.
+You can restore by going to the `file -> restore menu`~
+
+THIS IS NO LONGER AVAILABLE the patched app will be named Crossover_pathced and the original version kept as it is.
 
 <img width="168" alt="restore" src="https://github.com/italomandara/CXPatcher/assets/12135454/81a09c09-4209-4af1-911b-461efcaf2421">
 
 
 ## Upgrade from an old patch
 
-If you patched from an old version and you just want to update the patched
-CrossOver app just turn on the option and drag 'n drop
+~If you patched from an old version and you just want to update the patched
+CrossOver app just turn on the option and drag 'n drop~
+
+THIS IS NO LONGER AVAILABLE
 
 <img width="399" alt="repatch" src="https://github.com/italomandara/CXPatcher/assets/12135454/8f8295ed-5da3-4a5f-93c0-4daa4851b0ec">
 

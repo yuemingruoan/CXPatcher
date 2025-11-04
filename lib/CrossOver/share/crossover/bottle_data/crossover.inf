@@ -521,11 +521,18 @@ HKCU,"Software\Wine\AppDefaults\cxwget.exe\DllOverrides","wininet",,"builtin"
  HKCU,"Software\Wine\AppDefaults\NINJAGAIDEN2BLACK.exe\DllOverrides","*vcruntime140",,"native,builtin"
  HKCU,"Software\Wine\AppDefaults\NINJAGAIDEN2BLACK.exe\DllOverrides","*vcruntime140_1",,"native,builtin
 
-
 ; Fix for the Cyber Engine Tweaks and RED4ext in Cyberpunk 2077 (credits: https://wiki.redmodding.org/cyber-engine-tweaks/getting-started/installing/linux-proton)
  HKCU,"Software\Wine\AppDefaults\Cyberpunk2077.exe\DllOverrides","d3dcompiler_47",,"native,builtin"
  HKCU,"Software\Wine\AppDefaults\Cyberpunk2077.exe\DllOverrides","version",,"native,builtin"
  HKCU,"Software\Wine\AppDefaults\Cyberpunk2077.exe\DllOverrides","winmm",,"native,builtin"
+
+; Red Dead Redemption 2 DLL overrides for modding tools (LML, Script Hook, Mod Manager)
+ HKCU,"Software\Wine\AppDefaults\RDR2.exe\DllOverrides","dinput8",,"native,builtin"
+ HKCU,"Software\Wine\AppDefaults\RDR2.exe\DllOverrides","modmanager.core",,"native,builtin"
+ HKCU,"Software\Wine\AppDefaults\RDR2.exe\DllOverrides","modmanager.nativeinterop",,"native,builtin"
+ HKCU,"Software\Wine\AppDefaults\RDR2.exe\DllOverrides","nlog",,"native,builtin"
+ HKCU,"Software\Wine\AppDefaults\RDR2.exe\DllOverrides","scripthookrdr2",,"native,builtin"
+ HKCU,"Software\Wine\AppDefaults\RDR2.exe\DllOverrides","version",,"native,builtin"
 
 ; Make sure that winewrapper isn't hotwired with an alternative crypt32.
 HKCU,"Software\Wine\AppDefaults\winewrapper.exe\DllOverrides","crypt32",,"builtin"

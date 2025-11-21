@@ -25,10 +25,6 @@ struct GPTKExpMtlFXToggle: View {
                         Text("MacOS \(String(ProcessInfo().operatingSystemVersion.majorVersion)) \(localizedCXPatcherString(forKey: "unsupported"))")
                     }.foregroundColor(.red)
                 }
-                HStack(alignment: .center) {
-                    Image(systemName: "exclamationmark.triangle.fill")
-                    Text((localizedCXPatcherString(forKey: "Works only on M3 or better CPUs")))
-                }.foregroundColor(.yellow)
             }
         }
         .padding(.vertical, 6.0)

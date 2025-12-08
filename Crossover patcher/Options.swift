@@ -130,7 +130,6 @@ struct Options: View {
             .frame(maxHeight: 700)
         }
         .frame(maxHeight: 700)
-        .background(Color.white.opacity(0.5))
     }
 }
 

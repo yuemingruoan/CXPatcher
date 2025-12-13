@@ -1,95 +1,126 @@
-"AgreeAndProceedButtonText" = "Agree and Proceed";
-"AllowRepatchUpgradeToggle" = "Allow repatch / upgrade";
-"Credits" = "Credits:";
-"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)
-[@nastys](https://github.com/nastys)";
-"CreditsText" = "Many thanks to the developers behind the DXVK and MoltenVK patches for their great help and for providing the binaries.";
-"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
-"CrossOverDownloadURLText" = "CodeWeavers Downloads Page";
-"CrossOverPatcher" = "CXPatcher";
-"CWForums" = "CodeWeavers forums";
-"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
-"CWWebsite" = "CodeWeavers doesn't support patched or modified CrossOver apps, see the";
+/* --- App Info & Credits --- */
 "CXPatcherName" = "CXPatcher";
-"DisclaimerPleaseNoteLabelText" = "Please note:";
-"DisclaimerText" = "This is an unofficial patching program for CrossOver, and CodeWeavers is in no way involved in its development. Although it has been tested, this software may render your CrossOver installation unusable or unstable. USE AT YOUR OWN RISK. Use of this patcher will also void any official support from CodeWeavers.
-
-If you face any issues after your installation has been patched, you may download a new copy of CrossOver from the CodeWeavers website.";
-"XtLibsButtonText" = "Locate DXMT folder";
-"XtLibsLabel" = "Install external framework";
-"XtLibsToggle" = "Install DXMT";
-"XtLibsLocateText" = "Locate the DXMT folder using the button below:";
-"XtLibsPathLabelText" = "External resource folder path";
-"XtLibsDisclaimerText" = "WARNING: This is an Alpha release, it may be unstable and crash your machine, use at your own risk, When the patch is applied YOU NEED TO CREATE A NEW BOTTLE FOR DXMT";
-"GPTKToggle" = "Integrate D3DMetal (GPTK)";
-"ForcePatch" = "Force Patch";
-"Instructions" = "Instructions";
-"InstructionsAskWhatDo" = "What does this program do?";
-"InstructionsButtonText" = "Instructions";
-"InstructionsFunctionDescription" = "This patcher modifies your CrossOver installation to use updated and tweaked versions of DXVK and MoltenVK, which in some instances will improve compatibility or performance for some games.";
-"InstructionsText" = "Ensure you have an unmodified release version of CrossOver, as downloaded from your CodeWeavers account page. Make sure CrossOver has been registered and run at least once, to make sure the latest DXVK is activated properly. You may need to toggle DXVK off and on within CrossOver. If for any reason your CrossOver install has been rendered unusable, it can be downloaded again from the CodeWeavers website; this patcher will not make any permanent modifications to your CrossOver bottles.";
-"PatchStatusAlreadyPatched" = "This CrossOver.app has already been patched!";
-"PatchStatusError" = "This version of CrossOver is not supported. Please use CrossOver %@ from the CodeWeavers website.";
-"PatchStatusReady" = "Drop your CrossOver.app here \nor click to select it in Finder";
-"PatchStatusSuccess" = "CrossOver.app has been successfully patched";
-"RestoreButtonLabel" = "Restore";
-"RestoreConfirm" = "Cool!";
-"RestoreFailure" = "Either this CrossOver.app is unpatched, or was patched with an incompatible version of CXPatcher.";
-"RestoreStatusLabel" = "CrossOver.app Restore";
-"RestoreSuccess" = "CrossOver.app has been successfully restored.";
+"CrossOverPatcher" = "CXPatcher";
+"Credits" = "Credits:";
+"CreditsText" = "Huge thanks to the developers behind DXVK and MoltenVK patches for their great help and providing the binaries.";
+"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)\n[@nastys](https://github.com/nastys)";
 "GcenxURL" = "https://github.com/Gcenx";
 "nastysURL" = "https://github.com/nastys";
-"MediaFoundation" = "In order to make Media foundation libraries work you'll have to install GStreamer (Install for all users required)";
-"DownloadGStreamer" = "Download GStreamer";
-"GStreamerInstalled" = "GStreamer is already Installed";
+
+/* --- Disclaimers & Legal --- */
+"DisclaimerPleaseNoteLabelText" = "Please note:";
+"DisclaimerText" = "This is an unofficial patcher program for CrossOver, and CodeWeavers is not involved in its development in any way. Although it has been tested, this software may render your CrossOver installation unusable or unstable. USE AT YOUR OWN RISK. Using this patcher will also void any official support from CodeWeavers.\n\nIf you encounter problems after your installation has been patched, you can download a new copy of CrossOver from the CodeWeavers website.";
+"CWWebsite" = "CodeWeavers does not support patched or modified CrossOver apps, see";
+"CrossOverDownloadURLText" = "CodeWeavers Download Page";
+"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
+"CWForums" = "CodeWeavers Forums";
+"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
 "waitFor" = "Waiting for you to read the disclaimer and confirm";
+"confirmation" = "Please type 'I will not ask CodeWeavers for support or refund' in the input field below";
 "confirmationValue" = "I will not ask CodeWeavers for support or refund";
-"confirmation" =  "Please type 'I will not ask CodeWeavers for support or refund' in the input field below";
-"unsupported" = "unsupported";
-"bottlesPathToggle" = "Use separate bottles path";
+
+/* --- Main Navigation & Buttons --- */
+"AgreeAndProceedButtonText" = "Agree and Proceed";
+"continue" = "Continue";
+"Options" = "Options";
 "optionsButtonText" = "Advanced Options";
-"options" = "Options";
-"MTLHUDToggle" = "METAL HUD always on";
-"DisableFastMathToggle" = "Disable fast math";
-"DisableAutoUpdate" = "Prevent CrossOver auto update";
-"bottlesToggleHelp" = "Bottles will be saved in a different folder, crossover won't use the bottles generated with stock CrossOver, you may need to create a new bottle, there's an option to customize the path where the bottles are located";
-"gptkToggleHelp" = "Updates the current Gameporting toolkit libraries";
-"mkvToggleHelp" = "Updates MoltenVK (with the UE4 Hack)";
-"dxvkToggleHelp" = "Updates DXVK libraries";
-"signatureToggleHelp" = "removes app signature to fix GateKeeper issues (app will open with the right click)";
-"autoUpdateToggleHelp" = "Disable CrossOver's update check prompt";
-"fastMathToggleHelp" = "Fixes some rendering issues with some games using DXVK (SLOWER) for all bottles";
-"advertiseAVXToggle" = "Always Advertises AVX";
-"advertiseAVXToggleHelp" = "This forces rosetta to advertise AVX, instead of only using it on demand (Some games like Yakuza need that to run) will make some games run but could potentially slow down or break other games if not sure leave unchecked";
-"hudToggleHelp" = "Enables The Metal Hud For all bottles";
+"toolsButtonText" = "Tools";
+"InstructionsButtonText" = "Instructions";
+
+/* --- Instructions --- */
+"Instructions" = "Instructions";
+"InstructionsAskWhatDo" = "What does this program do?";
+"InstructionsFunctionDescription" = "This patcher modifies your CrossOver installation to use updated and tweaked versions of DXVK and MoltenVK, which in some cases will improve compatibility or performance for some games.";
+"InstructionsText" = "Ensure you have an unmodified release version of CrossOver, downloaded from your CodeWeavers account page. Ensure CrossOver has been registered and run at least once, to ensure the latest DXVK is activated properly. You may need to toggle DXVK on and off within CrossOver. If for any reason your CrossOver installation becomes unusable, you can download it again from the CodeWeavers website; this patcher will not make any permanent modifications to your CrossOver bottles.";
+
+/* --- Patching Status --- */
+"PatchStatusReady" = "Drop your CrossOver.app here\nor click to select it in Finder";
+"PatchStatusSuccess" = "CrossOver.app has been successfully patched";
+"PatchStatusAlreadyPatched" = "This CrossOver.app has already been patched!";
+"PatchStatusError" = "Could not patch CrossOver.app. Please verify that you are trying to patch the release version of CrossOver %@ from the CodeWeavers website.";
+"PatchStatusFileExists" = "App with suffix _patched already exists";
+"unsupported" = "Unsupported";
+"ForcePatch" = "Force Patch";
+
+/* --- Restore / Backup --- */
+"RestoreButtonLabel" = "Restore";
+"RestoreStatusLabel" = "Restoring CrossOver.app";
+"RestoreConfirm" = "Cool!";
+"RestoreSuccess" = "CrossOver.app has been successfully restored.";
+"RestoreFailure" = "Either this CrossOver.app is unpatched or it was patched with an incompatible version of CXPatcher.";
+"hasAlreadyBackup" = "Cannot create backup of the app. Please ensure no copies of Crossover_original.app are in your app folder and try again.";
+
+/* --- Features: MoltenVK --- */
+"Patch MoltenVK" = "Patch MoltenVK";
+"mkvToggleHelp" = "Updates MoltenVK libraries (with UE4 Hack)";
 "MVKdontPatch" = "Don't patch";
-"MVKbaseline" = "Base MVK + UE4 hack";
+"MVKbaseline" = "Baseline MVK + UE4 hack";
 "MVKlatest" = "Latest MVK + UE4 hack";
 "MVKexperimental" = "Experimental MVK + UE4 hack";
+
+/* --- Features: DXVK --- */
+"Patch DXVK" = "Patch DXVK";
+"dxvkToggleHelp" = "Updates DXVK libraries";
 "DXVKAsyncToggle" = "DXVK Async";
-"DXVKAsyncToggleHelp" = "Enables DXVK Asynchronous Shader compilation";
+"DXVKAsyncToggleHelp" = "Enables DXVK async shader compilation";
+
+/* --- Features: GPTK / D3DMetal / MetalFX --- */
+"GPTKToggle" = "Integrate D3DMetal (GPTK)";
+"gptkToggleHelp" = "Updates the current Game Porting Toolkit libraries";
+"enableExpMtlFX" = "Enable experimental MetalFX features";
+"installExpMtlFXhelp" = "Installs Nvidia DLSS and Nvidia Frame Generation (GPTK3)";
+"metalFXSpatial" = "Metal FX Spatial";
+"metalFXSpatialHelp" = "Enables MetalFX spatial upscaler on output swapchain. By default it will double output resolution.";
+"metalSpatialUpscaleFactor" = "Upscale Factor: %@";
+
+/* --- Features: DXMT / External Libraries --- */
+"XtLibsLabel" = "Install external framework";
+"XtLibsToggle" = "Install DXMT";
+"ExternalsToggleHelp" = "Installs external DXMT libraries required to run DXMT in CrossOver";
+"XtLibsButtonText" = "Locate DXMT folder";
+"XtLibsLocateText" = "Locate DXMT folder using the button below:";
+"XtLibsPathLabelText" = "Path of external resources folder";
+"XtLibsDisclaimerText" = "WARNING: This is an Alpha version, it might be unstable and crash your machine. Use at your own risk. When patch is applied YOU NEED TO CREATE A NEW BOTTLE FOR DXMT";
+"DXMTOptions" = "DXMT Options";
+
+/* --- Features: GStreamer --- */
+"Patch GStreamer" = "Patch GStreamer";
+"GStreamerToggleHelp" = "Updates GStreamer library";
+"MediaFoundation" = "To get Media Foundation libraries working you will need to install GStreamer (Installation required on all users)";
+"DownloadGStreamer" = "Download GStreamer";
+"GStreamerInstalled" = "GStreamer is already installed";
+
+/* --- System / App Management --- */
+"AllowRepatchUpgradeToggle" = "Allow re-patch / upgrade";
+"Remove signature" = "Remove signature";
+"signatureToggleHelp" = "Removes the app signature to fix GateKeeper issues (the app will open with right click)";
+"DisableAutoUpdate" = "Prevent CrossOver auto-update";
+"autoUpdateToggleHelp" = "Disables CrossOver update check prompt";
+"bottlesPathToggle" = "Use a separate bottles path";
+"bottlesToggleHelp" = "Bottles will be saved in a different folder. CrossOver will not use bottles generated with standard CrossOver. You might need to create a new bottle. There is an option to customize the path where bottles are located.";
+
+/* --- Environment Globals (Advanced) --- */
+"Environment Globals" = "Environment Globals";
+"advertiseAVXToggle" = "Always advertise AVX";
+"advertiseAVXToggleHelp" = "This forces Rosetta to advertise AVX, instead of using it only on demand (some games like Yakuza need that to run). Can make some games work but potentially slow down or break other games. If unsure leave unchecked";
+"DisableFastMathToggle" = "Disable fast math";
+"fastMathToggleHelp" = "Fixes some rendering issues with some games using DXVK (SLOWER) for all bottles";
+"MTLHUDToggle" = "METAL HUD always on";
+"hudToggleHelp" = "Enables Metal Hud for all bottles";
 "DisableUE4HackToggle" = "Disable UE4 Hack";
-"DisableUE4HackToggleHelp" = "Disables the UE4 Hack (use this option if you have graphical issues)";
-"continue" = "Continue";
-"d3dMetalCache" = "D3dMetal cache";
+"DisableUE4HackToggleHelp" = "Disables UE4 hacks (use this if you have graphical issues)";
+"preferredMaxFrameRate" = "Max Frame Rate: %@";
+"preferredMaxFrameRateHelp" = "Can be set to enforce application frame pacing controlled by Metal. Value must be a multiple of your display refresh rate (e.g. 15/30/40/60/120 is valid for a 120Hz display).";
+
+/* --- Tools: Cache Management --- */
+"d3dMetalCache" = "D3dMetal Cache";
 "clearD3dmetalCache" = "Clear";
 "ShowD3dmetalCacheFolder" = "Show folder";
-"findSteamCaches" = "Find Steam Caches";
 "d3dmetalCacheDeleted" = "All D3dMetal cache has been cleared";
 "d3dmetalCacheDeleteFailed" = "Failed to delete d3dmetal cache";
+"findSteamCaches" = "Find Steam Caches";
 "scanningSteamFolders" = "Scanning Steam cache folders";
 "clickFindSteamCaches" = "Click to scan Steam cache folders";
-"steamCacheDeleted" = "The Selected Steam cache folder has been cleared";
-"steamCacheDeleteFailed" = "Failed to delete selected steam cache";
+"steamCacheDeleted" = "Selected Steam cache folder has been cleared";
+"steamCacheDeleteFailed" = "Failed to delete selected Steam cache";
 "steamCacheDeleteInProgress" = "Clearing selected Steam cache";
-"toolsButtonText" = "Tools";
-"DXMTOptions" = "DXMT Options";
-"preferredMaxFrameRate" = "Max Frame Rate: %@";
-"preferredMaxFrameRateHelp" = "can be set to enforce the application's frame pacing being controled by Metal. The value must be a factor of your display's refresh rate. (e.g. 15/30/40/60/120 is valid for a 120hz display).";
-"metalFXSpatial" = "Metal FX Spatial";
-"metalFXSpatialHelp" = "Enables MetalFX spatial upscaler on output swapchain. By default it will double the output resolution.";
-"metalSpatialUpscaleFactor" = "Upscale Factor: %@";
-"hasAlreadyBackup" = "I can't create a backup of the app, please make sure there isn't any Crossover_original.app copies in your app folder and try again";
-"PatchStatusFileExists" = "An app with suffix _patched already exists";
-"enableExpMtlFX" = "Enable MetalFX experimental features";
-"installExpMtlFXhelp" = "Install Nvidia DLSS and Nvidia Frame Gen (GPTK3)";

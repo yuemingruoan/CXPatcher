@@ -1,91 +1,126 @@
-"AgreeAndProceedButtonText" = "同意して進む";
-"AllowRepatchUpgradeToggle" = "リパッチ/アップグレードを許可する";
-"Credits" = "クレジット：";
-"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)
-[@nastys](https://github.com/nastys)";
-"CreditsText" = "DXVKとMoltenVKのパッチを開発してくれた開発者に感謝の意を表します。彼らの素晴らしい助けとバイナリの提供に感謝します。";
-"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
-"CrossOverDownloadURLText" = "CodeWeaversダウンロードページ";
-"CrossOverPatcher" = "CXパッチャー";
-"CWForums" = "CodeWeaversフォーラム";
-"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
-"CWWebsite" = "CodeWeaversはパッチされたまたは変更されたCrossOverアプリをサポートしていません。以下を参照してください";
+/* --- App Info & Credits --- */
 "CXPatcherName" = "CXパッチャー";
-"DisclaimerPleaseNoteLabelText" = "ご注意ください：";
-"DisclaimerText" = "これはCrossOverの非公式のパッチプログラムであり、CodeWeaversはその開発に一切関与していません。テストされていますが、このソフトウェアはCrossOverのインストールを使用不能または不安定にする可能性があります。自己責任で使用してください。このパッチャーの使用により、CodeWeaversの公式サポートは無効になります。
-
-インストールがパッチされた後に問題が発生した場合は、CodeWeaversのウェブサイトから新しいCrossOverのコピーをダウンロードできます。";
-"XtLibsButtonText" = "DXMTフォルダーを見つける";
-"XtLibsLabel" = "外部フレームワークをインストール";
-"XtLibsToggle" = "DXMTをインストール";
-"XtLibsLocateText" = "下のボタンを使用してDXMTフォルダーを見つけてください:";
-"XtLibsPathLabelText" = "外部リソースフォルダのパス";
-"XtLibsDisclaimerText" = "警告: これはアルファ版です。不安定になったり、マシンがクラッシュする可能性があります。自己責任で使用してください。パッチが適用された場合、新しいボトルをDXMT用に作成する必要があります。";
-"GPTKToggle" = "D3DMetal（GPTK）を統合する";
-"ForcePatch" = "パッチを強制する";
-"Instructions" = "指示";
-"InstructionsAskWhatDo" = "このプログラムは何をするのですか？";
-"InstructionsButtonText" = "手順";
-"InstructionsFunctionDescription" = "このパッチャーは、CrossOverのインストールを更新および調整されたバージョンのDXVKとMoltenVKを使用するように変更します。これにより、一部のゲームの互換性やパフォーマンスが向上する場合があります。";
-"InstructionsText" = "CodeWeaversアカウントページからダウンロードした未変更のリリース版CrossOverを使用してください。最新のDXVKが正しくアクティブ化されるように、CrossOverを登録して少なくとも1回実行してください。CrossOver内でDXVKをオンとオフに切り替える必要があるかもしれません。何らかの理由でCrossOverのインストールが使用不能になった場合は、CodeWeaversのウェブサイトから再度ダウンロードすることができます。このパッチャーはCrossOverのボトルに永続的な変更を加えません。";
-"PatchStatusAlreadyPatched" = "このCrossOver.appはすでにパッチが適用されています！";
-"PatchStatusError" = "CrossOver.appのパッチを適用できませんでした。CodeWeaversのウェブサイトからリリースバージョンのCrossOver %@をパッチしようとしていることを確認してください。";
-"PatchStatusReady" = "CrossOver.appをここにドロップする\nまたはFinderで選択するためにクリックしてください";
-"PatchStatusSuccess" = "CrossOver.appは正常にパッチが適用されました";
-"RestoreButtonLabel" = "元に戻す";
-"RestoreConfirm" = "完了！";
-"RestoreFailure" = "このCrossOver.appは未パッチであるか、CXPatcherの互換性のないバージョンでパッチが適用されています。";
-"RestoreStatusLabel" = "CrossOver.appの復元";
-"RestoreSuccess" = "CrossOver.appは正常に復元されました。";
+"CrossOverPatcher" = "CXパッチャー";
+"Credits" = "クレジット：";
+"CreditsText" = "DXVKとMoltenVKのパッチを開発してくれた開発者に感謝の意を表します。彼らの素晴らしい助けとバイナリの提供に感謝します。";
+"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)\n[@nastys](https://github.com/nastys)";
 "GcenxURL" = "https://github.com/Gcenx";
 "nastysURL" = "https://github.com/nastys";
-"MediaFoundation" = "Media Foundation ライブラリを動作させるためには、GStreamer をインストールする必要があります（すべてのユーザーに対してインストールが必要です）";
-"DownloadGStreamer" = "GStreamerをダウンロード";
-"GStreamerInstalled" = "GStreamerはすでにインストールされています";
+
+/* --- Disclaimers & Legal --- */
+"DisclaimerPleaseNoteLabelText" = "ご注意ください：";
+"DisclaimerText" = "これはCrossOverの非公式のパッチプログラムであり、CodeWeaversはその開発に一切関与していません。テストされていますが、このソフトウェアはCrossOverのインストールを使用不能または不安定にする可能性があります。自己責任で使用してください。このパッチャーの使用により、CodeWeaversの公式サポートは無効になります。\n\nインストールがパッチされた後に問題が発生した場合は、CodeWeaversのウェブサイトから新しいCrossOverのコピーをダウンロードできます。";
+"CWWebsite" = "CodeWeaversはパッチされたまたは変更されたCrossOverアプリをサポートしていません。以下を参照してください";
+"CrossOverDownloadURLText" = "CodeWeaversダウンロードページ";
+"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
+"CWForums" = "CodeWeaversフォーラム";
+"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
 "waitFor" = "免責事項を読んで確認するのを待っています";
-"confirmationValue" = "CodeWeaversにサポートや返金を要求しないでください";
 "confirmation" = "以下の入力欄に「CodeWeaversにサポートや返金を要求しないでください」と入力してください";
-"unsupported" = "サポートされていない";
-"bottlesPathToggle" = "別々のボトルの経路を使用してください";
+"confirmationValue" = "CodeWeaversにサポートや返金を要求しないでください";
+
+/* --- Main Navigation & Buttons --- */
+"AgreeAndProceedButtonText" = "同意して進む";
+"continue" = "続ける";
+"Options" = "オプション";
 "optionsButtonText" = "詳細オプション";
-"options" = "オプション";
-"MTLHUDToggle" = "METAL HUD 常にオン";
-"DisableFastMathToggle" = "高速計算を無効にする";
-"DisableAutoUpdate" = "CrossOver の自動更新を防止する";
-"bottlesToggleHelp" = "ボトルは異なるフォルダに保存され、CrossOver は標準の CrossOver で生成されたボトルを使用しません。新しいボトルを作成する必要がある場合があり、ボトルが保存されるパスをカスタマイズするオプションがあります";
-"gptkToggleHelp" = "現在のゲームポーティング ツールキット ライブラリを更新";
+"toolsButtonText" = "ツール";
+"InstructionsButtonText" = "手順";
+
+/* --- Instructions --- */
+"Instructions" = "指示";
+"InstructionsAskWhatDo" = "このプログラムは何をするのですか？";
+"InstructionsFunctionDescription" = "このパッチャーは、CrossOverのインストールを更新および調整されたバージョンのDXVKとMoltenVKを使用するように変更します。これにより、一部のゲームの互換性やパフォーマンスが向上する場合があります。";
+"InstructionsText" = "CodeWeaversアカウントページからダウンロードした未変更のリリース版CrossOverを使用してください。最新のDXVKが正しくアクティブ化されるように、CrossOverを登録して少なくとも1回実行してください。CrossOver内でDXVKをオンとオフに切り替える必要があるかもしれません。何らかの理由でCrossOverのインストールが使用不能になった場合は、CodeWeaversのウェブサイトから再度ダウンロードすることができます。このパッチャーはCrossOverのボトルに永続的な変更を加えません。";
+
+/* --- Patching Status --- */
+"PatchStatusReady" = "CrossOver.appをここにドロップする\nまたはFinderで選択するためにクリックしてください";
+"PatchStatusSuccess" = "CrossOver.appは正常にパッチが適用されました";
+"PatchStatusAlreadyPatched" = "このCrossOver.appはすでにパッチが適用されています！";
+"PatchStatusError" = "CrossOver.appのパッチを適用できませんでした。CodeWeaversのウェブサイトからリリースバージョンのCrossOver %@をパッチしようとしていることを確認してください。";
+"PatchStatusFileExists" = "接尾辞 _patched のアプリがすでに存在します";
+"unsupported" = "サポートされていない";
+"ForcePatch" = "パッチを強制する";
+
+/* --- Restore / Backup --- */
+"RestoreButtonLabel" = "元に戻す";
+"RestoreStatusLabel" = "CrossOver.appの復元";
+"RestoreConfirm" = "完了！";
+"RestoreSuccess" = "CrossOver.appは正常に復元されました。";
+"RestoreFailure" = "このCrossOver.appは未パッチであるか、CXPatcherの互換性のないバージョンでパッチが適用されています。";
+"hasAlreadyBackup" = "アプリのバックアップを作成できません。アプリフォルダに Crossover_original.app のコピーがないことを確認して、もう一度お試しください。";
+
+/* --- Features: MoltenVK --- */
+"Patch MoltenVK" = "Patch MoltenVK";
 "mkvToggleHelp" = "MoltenVK（UE4 ハックを使用）を更新";
-"dxvkToggleHelp" = "DXVK ライブラリを更新";
-"signatureToggleHelp" = "GateKeeper の問題を修正するためにアプリケーションの署名を削除します（アプリケーションは右クリックで開きます）";
-"autoUpdateToggleHelp" = "CrossOver の更新チェックプロンプトを無効にする";
-"fastMathToggleHelp" = "一部のゲームのレンダリングの問題を修正します（すべてのボトルで DXVK を使用）";
-"advertiseAVXToggle" = "常にAVXを宣伝";
-"advertiseAVXToggleHelp" = "これにより、Rosettaが要求に応じてのみ使用するのではなく、常にAVXを宣伝するようになります（Yakuzaのような一部のゲームはそれを実行するために必要です）。一部のゲームを動作させることができますが、他のゲームを遅くしたり壊したりする可能性があります。確信が持てない場合はチェックを外したままにしてください";
-"hudToggleHelp" = "すべてのボトルに Metal Hud を有効にする";
 "MVKdontPatch" = "パッチしないでください";
 "MVKbaseline" = "基本 MVK + UE4 ハック";
 "MVKlatest" = "最新のMVK + UE4ハック";
 "MVKexperimental" = "実験的なMVK + UE4ハック";
+
+/* --- Features: DXVK --- */
+"Patch DXVK" = "Patch DXVK";
+"dxvkToggleHelp" = "DXVK ライブラリを更新";
 "DXVKAsyncToggle" = "DXVK 非同期";
 "DXVKAsyncToggleHelp" = "DXVK 非同期シェーダーコンパイルを有効にします";
-"continue" = "続ける";
+
+/* --- Features: GPTK / D3DMetal / MetalFX --- */
+"GPTKToggle" = "D3DMetal（GPTK）を統合する";
+"gptkToggleHelp" = "現在のゲームポーティング ツールキット ライブラリを更新";
+"enableExpMtlFX" = "enableExpMtlFX";
+"installExpMtlFXhelp" = "installExpMtlFXhelp";
+"metalFXSpatial" = "Metal FX 空間";
+"metalFXSpatialHelp" = "出力スワップチェーンでMetalFX空間アップスケーラーを有効にします。デフォルトでは、出力解像度を2倍にします。";
+"metalSpatialUpscaleFactor" = "アップスケール係数: %@";
+
+/* --- Features: DXMT / External Libraries --- */
+"XtLibsLabel" = "外部フレームワークをインストール";
+"XtLibsToggle" = "DXMTをインストール";
+"ExternalsToggleHelp" = "ExternalsToggleHelp";
+"XtLibsButtonText" = "DXMTフォルダーを見つける";
+"XtLibsLocateText" = "下のボタンを使用してDXMTフォルダーを見つけてください:";
+"XtLibsPathLabelText" = "外部リソースフォルダのパス";
+"XtLibsDisclaimerText" = "警告: これはアルファ版です。不安定になったり、マシンがクラッシュする可能性があります。自己責任で使用してください。パッチが適用された場合、新しいボトルをDXMT用に作成する必要があります。";
+"DXMTOptions" = "DXMT オプション";
+
+/* --- Features: GStreamer --- */
+"Patch GStreamer" = "Patch GStreamer";
+"GStreamerToggleHelp" = "GStreamerToggleHelp";
+"MediaFoundation" = "Media Foundation ライブラリを動作させるためには、GStreamer をインストールする必要があります（すべてのユーザーに対してインストールが必要です）";
+"DownloadGStreamer" = "GStreamerをダウンロード";
+"GStreamerInstalled" = "GStreamerはすでにインストールされています";
+
+/* --- System / App Management --- */
+"AllowRepatchUpgradeToggle" = "リパッチ/アップグレードを許可する";
+"Remove signature" = "Remove signature";
+"signatureToggleHelp" = "GateKeeper の問題を修正するためにアプリケーションの署名を削除します（アプリケーションは右クリックで開きます）";
+"DisableAutoUpdate" = "CrossOver の自動更新を防止する";
+"autoUpdateToggleHelp" = "CrossOver の更新チェックプロンプトを無効にする";
+"bottlesPathToggle" = "別々のボトルの経路を使用してください";
+"bottlesToggleHelp" = "ボトルは異なるフォルダに保存され、CrossOver は標準の CrossOver で生成されたボトルを使用しません。新しいボトルを作成する必要がある場合があり、ボトルが保存されるパスをカスタマイズするオプションがあります";
+
+/* --- Environment Globals (Advanced) --- */
+"Environment Globals" = "Environment Globals";
+"advertiseAVXToggle" = "常にAVXを宣伝";
+"advertiseAVXToggleHelp" = "これにより、Rosettaが要求に応じてのみ使用するのではなく、常にAVXを宣伝するようになります（Yakuzaのような一部のゲームはそれを実行するために必要です）。一部のゲームを動作させることができますが、他のゲームを遅くしたり壊したりする可能性があります。確信が持てない場合はチェックを外したままにしてください";
+"DisableFastMathToggle" = "高速計算を無効にする";
+"fastMathToggleHelp" = "一部のゲームのレンダリングの問題を修正します（すべてのボトルで DXVK を使用）";
+"MTLHUDToggle" = "METAL HUD 常にオン";
+"hudToggleHelp" = "すべてのボトルに Metal Hud を有効にする";
+"DisableUE4HackToggle" = "DisableUE4HackToggle";
+"DisableUE4HackToggleHelp" = "DisableUE4HackToggleHelp";
+"preferredMaxFrameRate" = "最大フレームレート: %@";
+"preferredMaxFrameRateHelp" = "アプリケーションのフレームペーシングをMetalで制御するように設定できます。この値は、ディスプレイのリフレッシュレートの倍数でなければなりません。（例：120Hzのディスプレイでは15/30/40/60/120が有効です）。";
+
+/* --- Tools: Cache Management --- */
 "d3dMetalCache" = "D3dMetal キャッシュ";
 "clearD3dmetalCache" = "クリア";
 "ShowD3dmetalCacheFolder" = "フォルダを表示";
-"findSteamCaches" = "Steam キャッシュを検索";
 "d3dmetalCacheDeleted" = "すべての D3dMetal キャッシュがクリアされました";
 "d3dmetalCacheDeleteFailed" = "D3dMetal キャッシュの削除に失敗しました";
+"findSteamCaches" = "Steam キャッシュを検索";
 "scanningSteamFolders" = "Steam キャッシュフォルダのスキャン";
 "clickFindSteamCaches" = "Steam キャッシュフォルダをスキャンするにはクリックしてください";
 "steamCacheDeleted" = "選択した Steam キャッシュフォルダが削除されました";
 "steamCacheDeleteFailed" = "選択した Steam キャッシュの削除に失敗しました";
 "steamCacheDeleteInProgress" = "選択した Steam キャッシュのクリア中";
-"toolsButtonText" = "ツール";
-"DXMTOptions" = "DXMT オプション";
-"preferredMaxFrameRate" = "最大フレームレート: %@";
-"preferredMaxFrameRateHelp" = "アプリケーションのフレームペーシングをMetalで制御するように設定できます。この値は、ディスプレイのリフレッシュレートの倍数でなければなりません。（例：120Hzのディスプレイでは15/30/40/60/120が有効です）。";
-"metalFXSpatial" = "Metal FX 空間";
-"metalFXSpatialHelp" = "出力スワップチェーンでMetalFX空間アップスケーラーを有効にします。デフォルトでは、出力解像度を2倍にします。";
-"metalSpatialUpscaleFactor" = "アップスケール係数: %@";
-"hasAlreadyBackup" = "アプリのバックアップを作成できません。アプリフォルダに Crossover_original.app のコピーがないことを確認して、もう一度お試しください。";
-"PatchStatusFileExists" = "接尾辞 _patched のアプリがすでに存在します";

@@ -15,6 +15,7 @@ struct Logo: View {
             .frame(width: 80.0, height: 80.0)
         Text(localizedCXPatcherString(forKey: "CXPatcherName"))
             .font(.title)
+            .fontWeight(.bold)
         .padding(.vertical, 1.0)
     }
 }

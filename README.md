@@ -27,13 +27,13 @@ For more info: [https://www.codeweavers.com/support/forums/general/?t=27;msg=257
 - CXPatcher from 0.4 on will support 23.x.x
 - CXPatcher from 0.5 on will support 24.x.x
 - CXPatcher from 0.6 on will support 25.x.x
-ans so on...
-(keep an eye on the specific verson)
+and so on...
+(keep an eye on the specific version)
 
-## What MacOS does it support
+## What macOS does it support
 
 Ventura (13) or newer
-Currently GPTK requires MacOS Sonoma or a newer MacOS
+Currently GPTK requires macOS Sonoma or a newer macOS
 
 ## What does it do?
 
@@ -41,7 +41,7 @@ This patcher will upgrade your CrossOver app with the latest DXVK, D3DMetal (GPT
 patched for improved compatibility, and dramatically extends compatibility with
 Unreal engine 4 games (in DXVK).
 
-Alternatively you can choose to update DXMT to the lastest (or to a build from the main branch that hasn't been released yet)
+Alternatively you can choose to update DXMT to the latest (or to a build from the main branch that hasn't been released yet)
 To do that you'll need to download your DXMT preferred build.
 
 ## What does it NOT do?
@@ -57,9 +57,9 @@ DX12 games will now work via GPTK
 
 You need to have an unmodified version of CrossOver, you can download it at:
 [https://www.codeweavers.com/account/downloads](https://www.codeweavers.com/account/downloads).
-Please make sure the app has been registered or ran at least once, to make sure
+Please make sure the app has been registered or run at least once, to make sure
 the latest DXVK is activated properly. You may need to switch off
-DXVK and on again (that' the same procedure i recommend with dxmt and d3dmetal too), if you don't you will need to re-download it. If the
+DXVK and on again (that' the same procedure I recommend with DXMT and D3DMetal too), if you don't you will need to re-download it. If the
 patcher renders the app unusable you can either use the restore function (see
 instructions below) or download it again from the website, it doesn't do any
 permanent modifications to your 'bottles'.
@@ -79,33 +79,33 @@ for detailed instructions.
 ## New Bottle path
 
 CXPatcher will override the default bottle path to have its own folder prefixed with 'CXP' in the same one that contains the 'Bottles' folder.
-That's because lots of users keep having trouble when using old bottles created with the original Crossover.
-This way you'll be forced to create a new bottle just for the Patched Crossover so that you'll no longer have this kind of issue.
+That's because lots of users keep having trouble when using old bottles created with the original CrossOver.
+This way you'll be forced to create a new bottle just for the patched CrossOver so that you'll no longer have this kind of issue.
 
 If you don't like that you can disable it, it's enabled by default as you can see in the picture below:
 
 <img width="452" alt="Screenshot 2023-09-24 at 18 09 09" src="https://github.com/italomandara/CXPatcher/assets/12135454/b421b96e-5951-48e9-a333-42977021ca54">
 
 
-## Patching with gptk
+## Patching with GPTK
 
 There are new upcoming technologies developed this year that are capable of
 running DirectX 12 games and now you can have those embedded in CrossOver!
-In order to update D3DMetal to the latest version in CrossOver you just need switch on "Integrate D3DMetal (GPTK)" (now it's on by default)
+In order to update D3DMetal to the latest version in CrossOver you just need to switch on "Integrate D3DMetal (GPTK)" (now it's on by default)
 
 <img width="300" alt="integrate external resources" src="https://github.com/italomandara/CXPatcher/assets/12135454/0da08a95-5003-46c1-985c-80f2ff6dd256">
 <img width="401" alt="integrate external resources" src="https://github.com/italomandara/CXPatcher/assets/12135454/9f709365-cd25-4d34-a737-6f68ff2bb491">
 
-- now you can patch CrossOver as usual via either drag'n'drop or file selector
+- Now you can patch CrossOver as usual via either drag'n'drop or file selector
 (click in the drop area)
-- enjoy your DX12 games!
+- Enjoy your DX12 games!
 
 ## Restoring a patched app to the original app (unsupported in new versions)
 
 ~Maybe you changed your mind and prefer to use your original CrossOver app.
 You can restore by going to the `file -> restore menu`~
 
-THIS IS NO LONGER AVAILABLE the patched app will be named Crossover_pathced and the original version kept as it is.
+THIS IS NO LONGER AVAILABLE the patched app will be named Crossover_patched and the original version kept as it is.
 
 <img width="168" alt="restore" src="https://github.com/italomandara/CXPatcher/assets/12135454/81a09c09-4209-4af1-911b-461efcaf2421">
 
@@ -119,9 +119,9 @@ THIS IS NO LONGER AVAILABLE
 
 <img width="399" alt="repatch" src="https://github.com/italomandara/CXPatcher/assets/12135454/8f8295ed-5da3-4a5f-93c0-4daa4851b0ec">
 
-## Troubleshoting
+## Troubleshooting
 
-**If your env vars doesn't work anymore or can't enable/disable fast math**:
+**If your env vars don't work anymore or can't enable/disable fast math**:
 use the env variable `CXPATCHER_SKIP_NTDLLHACKS=1` and then any env var should
 work as usual
 **For other issues**:

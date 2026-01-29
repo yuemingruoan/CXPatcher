@@ -7,6 +7,43 @@
 
 import Foundation
 import SwiftUI
+import os
+
+let logger = Logger(subsystem: "CXPatcher", category: "util")
+
+class Console {
+    var logMessages: [String] = []
+    
+    func log(_ msg: String) {
+        print(msg)
+        logMessages.append(msg)
+    }
+    func error(_ msg: String) {
+        let errorMsg: String = "ERROR: \(msg)"
+        logger.error("\(errorMsg)")
+        print(errorMsg)
+        logMessages.append(errorMsg)
+    }
+    func clear() {
+        self.logMessages.removeAll()
+    }
+    func saveLogs(to: URL) {
+        if f.fileExists(atPath: to.path()) {
+            do {
+                try f.removeItem(at: to)
+            } catch {
+                print(error)
+            }
+        }
+        let content = logMessages.joined(separator: "\n")
+        print("Saving logs to \(to)")
+        do {
+            try content.write(to: to, atomically: true, encoding: .utf8)
+        } catch {
+            print(error)
+        }
+    }
+}
 
 var isVentura: Bool {
     SKIP_VENTURA_CHECK ? false : ProcessInfo().operatingSystemVersion.majorVersion < 14
@@ -32,6 +69,7 @@ enum Status {
     case error
     case fileExists
     case hasBackup
+    case fatalError
 }
 
 enum DeleteStatus {
@@ -68,34 +106,6 @@ enum PatchMVK {
     case latestUE4
     case experimentalUE4
     case none
-}
-
-class Console {
-    var logMessages: [String] = []
-    
-    func log(_ msg: String) {
-        print(msg)
-        logMessages.append(msg)
-    }
-    func clear() {
-        self.logMessages.removeAll()
-    }
-    func saveLogs(to: URL) {
-        if f.fileExists(atPath: to.path()) {
-            do {
-                try f.removeItem(at: to)
-            } catch {
-                print(error)
-            }
-        }
-        let content = logMessages.joined(separator: "\n")
-        print("Saving logs to \(to)")
-        do {
-            try content.write(to: to, atomically: true, encoding: .utf8)
-        } catch {
-            print(error)
-        }
-    }
 }
 
 var console = Console()
@@ -252,7 +262,7 @@ private func safeFileCopy(source: String, dest: String) {
         console.log("file doesn't exist I'll just copy then")
     }
 
-    do { try f.copyItem(at: URL(filePath: source), to: URL(filePath: dest))
+    do { try f.copyItem(at: URL(fileURLWithPath: source), to: URL(fileURLWithPath: dest))
         console.log("\(source) copied")
     } catch {
         console.log(error.localizedDescription)
@@ -344,16 +354,18 @@ func isCrossoverApp(url: URL, version: String? = nil, skipVersionCheck: Bool? = 
     let plistPath = url.path + "/Contents/Info.plist"
     if (f.fileExists(atPath: plistPath)) {
         let plist = parseCXPlist(plistPath: plistPath)
-        if (plist.CFBundleIdentifier == "com.codeweavers.CrossOver" && skipVersionCheck == true) {
-            return true
-        }
-        if (plist.CFBundleIdentifier == "com.codeweavers.CrossOver" && plist.CFBundleShortVersionString.starts(with: SUPPORTED_CROSSOVER_VERSION) ) {
-            console.log("app version is ok: \(plist.CFBundleShortVersionString)")
-            return true
-        } else {
-            console.log("unsupported version \(plist.CFBundleShortVersionString)")
+        if (plist.CFBundleIdentifier != "com.codeweavers.CrossOver") {
             return false
         }
+        if (skipVersionCheck == true) {
+            return true
+        }
+        if (plist.CFBundleShortVersionString.starts(with: SUPPORTED_CROSSOVER_VERSION) ) {
+            console.log("app version is ok: \(plist.CFBundleShortVersionString)")
+            return true
+        }
+        console.log("unsupported version \(plist.CFBundleShortVersionString)")
+        return false
     } else {
         console.log("file doesn't exist at \(plistPath)")
     }
@@ -403,7 +415,7 @@ func getColorBy(status: Status) -> Color {
         return .green
     case .alreadyPatched, .hasBackup:
         return .orange
-    case .error, .fileExists:
+    case .error, .fatalError, .fileExists:
         return .red
     }
 }
@@ -416,7 +428,7 @@ func getIconBy(status: Status) -> String {
         return "checkmark.circle.fill"
     case .alreadyPatched, .hasBackup:
         return "hand.raised.app.fill"
-    case .error, .fileExists:
+    case .error, .fileExists, .fatalError:
         return "x.circle.fill"
     }
 }
@@ -425,6 +437,8 @@ func getTextBy(status: Status) -> String {
     switch status {
     case .error:
         return localizedCXPatcherString(forKey: "PatchStatusError", value: SUPPORTED_CROSSOVER_VERSION)
+    case .fatalError:
+        return "Unexpected error"
     case .unpatched:
         return localizedCXPatcherString(forKey: "PatchStatusReady")
     case .success:
@@ -586,8 +600,7 @@ func patch(url: URL, opts: inout Opts) throws -> URL? {
             console.log("patching \(url.path)")
             try safeShell("/usr/bin/xattr -cr '\(url.path)' && /usr/bin/codesign --force --deep --sign - '\(url.path)'")
         } catch {
-            console.log("xattr or codesign failed")
-            console.log(error.localizedDescription)
+            console.error("\(error.localizedDescription)")
         }
     }
     let patchedUrl = try renameApp(url: url)

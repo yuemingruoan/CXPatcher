@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os
 
 func applyPatch(url: URL, opts: inout Opts, onPatch: () -> Void = {}) {
     if (opts.busy) {
@@ -26,15 +27,13 @@ func applyPatch(url: URL, opts: inout Opts, onPatch: () -> Void = {}) {
         if let patchedUrl = try validateAndPatch(url: url, opts: &opts, onPatch: onPatch) {
             opts.status = .success
             logFile = patchedUrl.appendingPathComponent("Contents").appendingPathComponent("cxplog.txt")
+            console.saveLogs(to: logFile)
         } else {
-            opts.status = .error
-            logFile = url.deletingLastPathComponent().appendingPathComponent("cxplog.txt")
+            console.error("Error Status: \(opts.status)")
         }
     } catch {
-        console.log(error.localizedDescription)
-        opts.status = .error
-        logFile = url.deletingLastPathComponent().appendingPathComponent("cxplog.txt")
+        console.error("\(error.localizedDescription)")
     }
-    console.saveLogs(to: logFile)
     opts.busy = false
 }
+

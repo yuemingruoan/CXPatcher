@@ -9,7 +9,7 @@ import SwiftUI
 import Cocoa
 
 @main
-struct Crossover_patcherApp: App {    
+struct Crossover_patcherApp: App {
     @State private var opts = Opts()
     
     var body: some Scene {
@@ -24,15 +24,21 @@ struct Crossover_patcherApp: App {
                 }
             }
         }
-        Window("Instructions", id: "instructions") {
-            Instructions().fixedSize()
+        
+        Window(localizedCXPatcherString(forKey: "Instructions"), id: "instructions") {
+            Instructions()
+                .fixedSize()
         }
-        Window("Options", id: "options") {
+        .windowResizability(.contentSize)
+        
+        Window(localizedCXPatcherString(forKey: "Options"), id: "options") {
             Options(opts: $opts)
         }
         .defaultSize(width: 400, height: 700)
         .windowResizability(.contentSize)
-        Window("Tools", id: "tools") {
+        
+
+        Window(localizedCXPatcherString(forKey: "toolsButtonText"), id: "tools") {
             Tools().fixedSize()
         }
         .windowResizability(.contentSize)

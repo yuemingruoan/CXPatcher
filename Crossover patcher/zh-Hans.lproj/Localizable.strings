@@ -1,91 +1,126 @@
-"AgreeAndProceedButtonText" = "同意并继续";
-"AllowRepatchUpgradeToggle" = "允许重新打补丁/升级";
-"Credits" = "鸣谢：";
-"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)
-[@nastys](https://github.com/nastys)";
-"CreditsText" = "非常感谢 DXVK 和 MoltenVK 补丁背后的开发者提供的巨大帮助和二进制文件。";
-"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
-"CrossOverDownloadURLText" = "CodeWeavers 下载页面";
-"CrossOverPatcher" = "CXPatcher";
-"CWForums" = "CodeWeavers 论坛";
-"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
-"CWWebsite" = "CodeWeavers 不会为修改过或打过补丁的 CrossOver 应用提供支持，请参阅";
+/* --- App Info & Credits --- */
 "CXPatcherName" = "CXPatcher";
-"DisclaimerPleaseNoteLabelText" = "请注意：";
-"DisclaimerText" = "这是一个非官方的 CrossOver 补丁工具，CodeWeavers 没有以任何形式参与其开发。尽管经过了测试，此软件仍可能会导致您的 CrossOver 无法使用或不稳定。请自行承担风险！使用此打补丁程序还会使您失去 CodeWeavers 的官方支持。
-
-如果在打补丁后遇到任何问题，您可以从 CodeWeavers 网站下载新的 CrossOver 副本。";
-"XtLibsButtonText" = "定位DXMT文件夹";
-"XtLibsLabel" = "安装外部框架";
-"XtLibsToggle" = "安装 DXMT";
-"XtLibsLocateText" = "使用下面的按钮定位DXMT文件夹：";
-"XtLibsPathLabelText" = "外部资源文件夹路径";
-"XtLibsDisclaimerText" = "警告：这是一个Alpha版本，可能不稳定并导致您的计算机崩溃，请自行承担风险。当应用补丁时，您需要为DXMT创建一个新的瓶子。";
-"GPTKToggle" = "集成 D3DMetal（GPTK）";
-"ForcePatch" = "强制打补丁";
-"Instructions" = "说明";
-"InstructionsAskWhatDo" = "这个程序是做什么的？";
-"InstructionsButtonText" = "说明";
-"InstructionsFunctionDescription" = "此补丁程序将修改您的 CrossOver 安装，使用更新和优化版本的 DXVK 和 MoltenVK，有时会提高某些游戏的兼容性或性能。";
-"InstructionsText" = "请确保您从 CodeWeavers 账户页面下载了未经修改的 CrossOver 发布版本。确保 CrossOver 已注册并至少运行一次，以确保最新的 DXVK 已正确启用。您可能需要在 CrossOver 中切换启用或禁用 DXVK。若有任何原因导致您的 CrossOver 无法使用，您可以从 CodeWeavers 网站重新下载它，此补丁程序不会对您的 CrossOver 容器进行任何永久性修改。";
-"PatchStatusAlreadyPatched" = "此 CrossOver.app 已经打过补丁！";
-"PatchStatusError" = "无法为该版本的 CrossOver 打补丁。请从 CodeWeavers 网站下载 CrossOver %@。";
-"PatchStatusReady" = "将您的 CrossOver.app 拖到此处\n或点击以在访达中选择它";
-"PatchStatusSuccess" = "已成功为 CrossOver.app 打补丁";
-"RestoreButtonLabel" = "恢复";
-"RestoreConfirm" = "完成！";
-"RestoreFailure" = "此 CrossOver.app 未打过补丁，或者使用不兼容的 CXPatcher 版本打过补丁。";
-"RestoreStatusLabel" = "恢复 CrossOver.app";
-"RestoreSuccess" = "已成功恢复 CrossOver.app";
+"CrossOverPatcher" = "CXPatcher";
+"Credits" = "鸣谢：";
+"CreditsText" = "非常感谢 DXVK 和 MoltenVK 补丁背后的开发者提供的巨大帮助和二进制文件。";
+"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)\n[@nastys](https://github.com/nastys)";
 "GcenxURL" = "https://github.com/Gcenx";
 "nastysURL" = "https://github.com/nastys";
-"MediaFoundation" = "为使 Media Foundation 正常工作，您需要安装 GStreamer（需要为所有用户安装）";
-"DownloadGStreamer" = "下载 GStreamer";
-"GStreamerInstalled" = "GStreamer 已安装";
+
+/* --- Disclaimers & Legal --- */
+"DisclaimerPleaseNoteLabelText" = "请注意：";
+"DisclaimerText" = "这是一个非官方的 CrossOver 补丁工具，CodeWeavers 没有以任何形式参与其开发。尽管经过了测试，此软件仍可能会导致您的 CrossOver 无法使用或不稳定。请自行承担风险！使用此打补丁程序还会使您失去 CodeWeavers 的官方支持。\n\n如果在打补丁后遇到任何问题，您可以从 CodeWeavers 网站下载新的 CrossOver 副本。";
+"CWWebsite" = "CodeWeavers 不会为修改过或打过补丁的 CrossOver 应用提供支持，请参阅";
+"CrossOverDownloadURLText" = "CodeWeavers 下载页面";
+"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
+"CWForums" = "CodeWeavers 论坛";
+"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
 "waitFor" = "等待您阅读免责声明并确认";
-"confirmationValue" = "我不会向 CodeWeavers 请求支持或退款";
 "confirmation" = "请在下方输入框中输入“我不会向 CodeWeavers 请求支持或退款”";
-"unsupported" = "不受支持";
-"bottlesPathToggle" = "使用独立的容器路径";
+"confirmationValue" = "我不会向 CodeWeavers 请求支持或退款";
+
+/* --- Main Navigation & Buttons --- */
+"AgreeAndProceedButtonText" = "同意并继续";
+"continue" = "继续";
+"Options" = "选项";
 "optionsButtonText" = "高级选项";
-"options" = "选项";
-"MTLHUDToggle" = "始终开启 METAL HUD";
-"DisableFastMathToggle" = "禁用快速数学计算";
-"DisableAutoUpdate" = "阻止 CrossOver 的自动更新";
-"bottlesToggleHelp" = "容器将保存在不同的文件夹中，CrossOver 不会使用使用标准 CrossOver 生成的容器，您可能需要创建一个新容器，有一个选项可以自定义容器存储的路径";
-"gptkToggleHelp" = "更新当前的游戏移植工具库";
+"toolsButtonText" = "工具";
+"InstructionsButtonText" = "说明";
+
+/* --- Instructions --- */
+"Instructions" = "说明";
+"InstructionsAskWhatDo" = "这个程序是做什么的？";
+"InstructionsFunctionDescription" = "此补丁程序将修改您的 CrossOver 安装，使用更新和优化版本的 DXVK 和 MoltenVK，有时会提高某些游戏的兼容性或性能。";
+"InstructionsText" = "请确保您从 CodeWeavers 账户页面下载了未经修改的 CrossOver 发布版本。确保 CrossOver 已注册并至少运行一次，以确保最新的 DXVK 已正确启用。您可能需要在 CrossOver 中切换启用或禁用 DXVK。若有任何原因导致您的 CrossOver 无法使用，您可以从 CodeWeavers 网站重新下载它，此补丁程序不会对您的 CrossOver 容器进行任何永久性修改。";
+
+/* --- Patching Status --- */
+"PatchStatusReady" = "将您的 CrossOver.app 拖到此处\n或点击以在访达中选择它";
+"PatchStatusSuccess" = "已成功为 CrossOver.app 打补丁";
+"PatchStatusAlreadyPatched" = "此 CrossOver.app 已经打过补丁！";
+"PatchStatusError" = "无法为该版本的 CrossOver 打补丁。请从 CodeWeavers 网站下载 CrossOver %@。";
+"PatchStatusFileExists" = "已存在带有后缀 _patched 的应用程序";
+"unsupported" = "不受支持";
+"ForcePatch" = "强制打补丁";
+
+/* --- Restore / Backup --- */
+"RestoreButtonLabel" = "恢复";
+"RestoreStatusLabel" = "恢复 CrossOver.app";
+"RestoreConfirm" = "完成！";
+"RestoreSuccess" = "已成功恢复 CrossOver.app";
+"RestoreFailure" = "此 CrossOver.app 未打过补丁，或者使用不兼容的 CXPatcher 版本打过补丁。";
+"hasAlreadyBackup" = "无法创建应用的备份，请确保应用文件夹中没有 Crossover_original.app 的副本，然后重试。";
+
+/* --- Features: MoltenVK --- */
+"Patch MoltenVK" = "Patch MoltenVK";
 "mkvToggleHelp" = "更新 MoltenVK 库（带有 UE4 Hack）";
-"dxvkToggleHelp" = "更新 DXVK 库";
-"signatureToggleHelp" = "删除应用程序签名以解决 GateKeeper 问题（请稍后使用右键菜单打开应用程序）";
-"autoUpdateToggleHelp" = "禁用 CrossOver 的更新检查提示";
-"fastMathToggleHelp" = "为所有容器修复特定 DXVK 的游戏的渲染问题（此选项将会降低性能）";
-"advertiseAVXToggle" = "始终广告AVX";
-"advertiseAVXToggleHelp" = "这将强制Rosetta广告AVX，而不是仅在需要时使用它（某些游戏如Yakuza需要这样才能运行）。这可能会使某些游戏运行，但可能会减慢或破坏其他游戏。如果不确定，请保持未选中状态";
-"hudToggleHelp" = "为所有容器启用 METAL HUD";
 "MVKdontPatch" = "不要打补丁";
 "MVKbaseline" = "稳定版 MVK + UE4 Hack";
 "MVKlatest" = "最新MVK + UE4破解";
 "MVKexperimental" = "实验性MVK + UE4破解";
+
+/* --- Features: DXVK --- */
+"Patch DXVK" = "Patch DXVK";
+"dxvkToggleHelp" = "更新 DXVK 库";
 "DXVKAsyncToggle" = "DXVK 异步";
 "DXVKAsyncToggleHelp" = "启用 DXVK 异步着色器编译";
-"continue" = "继续";
+
+/* --- Features: GPTK / D3DMetal / MetalFX --- */
+"GPTKToggle" = "集成 D3DMetal（GPTK）";
+"gptkToggleHelp" = "更新当前的游戏移植工具库";
+"enableExpMtlFX" = "enableExpMtlFX";
+"installExpMtlFXhelp" = "installExpMtlFXhelp";
+"metalFXSpatial" = "Metal FX 空间";
+"metalFXSpatialHelp" = "在输出交换链上启用MetalFX空间升频器。默认情况下，它会将输出分辨率加倍。";
+"metalSpatialUpscaleFactor" = "升频因子：%@";
+
+/* --- Features: DXMT / External Libraries --- */
+"XtLibsLabel" = "安装外部框架";
+"XtLibsToggle" = "安装 DXMT";
+"ExternalsToggleHelp" = "ExternalsToggleHelp";
+"XtLibsButtonText" = "定位DXMT文件夹";
+"XtLibsLocateText" = "使用下面的按钮定位DXMT文件夹：";
+"XtLibsPathLabelText" = "外部资源文件夹路径";
+"XtLibsDisclaimerText" = "警告：这是一个Alpha版本，可能不稳定并导致您的计算机崩溃，请自行承担风险。当应用补丁时，您需要为DXMT创建一个新的瓶子。";
+"DXMTOptions" = "DXMT选项";
+
+/* --- Features: GStreamer --- */
+"Patch GStreamer" = "Patch GStreamer";
+"GStreamerToggleHelp" = "GStreamerToggleHelp";
+"MediaFoundation" = "为使 Media Foundation 正常工作，您需要安装 GStreamer（需要为所有用户安装）";
+"DownloadGStreamer" = "下载 GStreamer";
+"GStreamerInstalled" = "GStreamer 已安装";
+
+/* --- System / App Management --- */
+"AllowRepatchUpgradeToggle" = "允许重新打补丁/升级";
+"Remove signature" = "Remove signature";
+"signatureToggleHelp" = "删除应用程序签名以解决 GateKeeper 问题（请稍后使用右键菜单打开应用程序）";
+"DisableAutoUpdate" = "阻止 CrossOver 的自动更新";
+"autoUpdateToggleHelp" = "禁用 CrossOver 的更新检查提示";
+"bottlesPathToggle" = "使用独立的容器路径";
+"bottlesToggleHelp" = "容器将保存在不同的文件夹中，CrossOver 不会使用使用标准 CrossOver 生成的容器，您可能需要创建一个新容器，有一个选项可以自定义容器存储的路径";
+
+/* --- Environment Globals (Advanced) --- */
+"Environment Globals" = "Environment Globals";
+"advertiseAVXToggle" = "始终广告AVX";
+"advertiseAVXToggleHelp" = "这将强制Rosetta广告AVX，而不是仅在需要时使用它（某些游戏如Yakuza需要这样才能运行）。这可能会使某些游戏运行，但可能会减慢或破坏其他游戏。如果不确定，请保持未选中状态";
+"DisableFastMathToggle" = "禁用快速数学计算";
+"fastMathToggleHelp" = "为所有容器修复特定 DXVK 的游戏的渲染问题（此选项将会降低性能）";
+"MTLHUDToggle" = "始终开启 METAL HUD";
+"hudToggleHelp" = "为所有容器启用 METAL HUD";
+"DisableUE4HackToggle" = "DisableUE4HackToggle";
+"DisableUE4HackToggleHelp" = "DisableUE4HackToggleHelp";
+"preferredMaxFrameRate" = "最大帧率：%@";
+"preferredMaxFrameRateHelp" = "可以设置为由Metal控制应用程序的帧率节奏。值必须是显示器刷新率的倍数。（例如，15/30/40/60/120对120Hz显示器有效）。";
+
+/* --- Tools: Cache Management --- */
 "d3dMetalCache" = "D3dMetal 缓存";
 "clearD3dmetalCache" = "清除";
 "ShowD3dmetalCacheFolder" = "显示文件夹";
-"findSteamCaches" = "查找 Steam 缓存";
 "d3dmetalCacheDeleted" = "所有 D3dMetal 缓存已清除";
 "d3dmetalCacheDeleteFailed" = "删除 D3dMetal 缓存失败";
+"findSteamCaches" = "查找 Steam 缓存";
 "scanningSteamFolders" = "扫描 Steam 缓存文件夹";
 "clickFindSteamCaches" = "单击以扫描 Steam 缓存文件夹";
 "steamCacheDeleted" = "所选的 Steam 缓存文件夹已清除";
 "steamCacheDeleteFailed" = "无法删除所选的 Steam 缓存";
 "steamCacheDeleteInProgress" = "清除所选的 Steam 缓存";
-"toolsButtonText" = "工具";
-"DXMTOptions" = "DXMT选项";
-"preferredMaxFrameRate" = "最大帧率：%@";
-"preferredMaxFrameRateHelp" = "可以设置为由Metal控制应用程序的帧率节奏。值必须是显示器刷新率的倍数。（例如，15/30/40/60/120对120Hz显示器有效）。";
-"metalFXSpatial" = "Metal FX 空间";
-"metalFXSpatialHelp" = "在输出交换链上启用MetalFX空间升频器。默认情况下，它会将输出分辨率加倍。";
-"metalSpatialUpscaleFactor" = "升频因子：%@";
-"hasAlreadyBackup" = "无法创建应用的备份，请确保应用文件夹中没有 Crossover_original.app 的副本，然后重试。";
-"PatchStatusFileExists" = "已存在带有后缀 _patched 的应用程序";

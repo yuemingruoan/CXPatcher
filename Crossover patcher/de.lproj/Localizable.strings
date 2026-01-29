@@ -1,91 +1,126 @@
-"AgreeAndProceedButtonText" = "Zustimmen und Fortfahren";
-"AllowRepatchUpgradeToggle" = "Repatch/Upgrade zulassen";
-"Credits" = "Danksagungen:";
-"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)
-[@nastys](https://github.com/nastys)";
-"CreditsText" = "Vielen Dank an die Entwickler hinter den DXVK- und MoltenVK-Patches für ihre großartige Hilfe und die Bereitstellung der Binärdateien.";
-"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
-"CrossOverDownloadURLText" = "CodeWeavers-Downloadseite";
-"CrossOverPatcher" = "CXPatcher";
-"CWForums" = "CodeWeavers-Foren";
-"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
-"CWWebsite" = "CodeWeavers unterstützt keine gepatchten oder geänderten CrossOver-Apps, siehe";
+/* --- App Info & Credits --- */
 "CXPatcherName" = "CXPatcher";
-"DisclaimerPleaseNoteLabelText" = "bitte beachten Sie:";
-"DisclaimerText" = "Dies ist ein inoffizielles Patch-Programm für CrossOver, an dessen Entwicklung CodeWeavers in keiner Weise beteiligt ist. Obwohl diese Software getestet wurde, kann sie dazu führen, dass Ihre CrossOver-Installation unbrauchbar oder instabil wird. BENUTZUNG AUF EIGENE GEFAHR. Durch die Verwendung dieses Patchers erlischt auch jegliche offizielle Unterstützung von CodeWeavers.
-
-Sollten nach dem Patchen Ihrer Installation Probleme auftreten, können Sie eine neue Kopie von CrossOver von der CodeWeavers-Website herunterladen.";
-"XtLibsButtonText" = "DXMT-Ordner finden";
-"XtLibsLabel" = "Externes Framework installieren";
-"XtLibsToggle" = "DXMT installieren";
-"XtLibsLocateText" = "Finden Sie den DXMT-Ordner mit der Schaltfläche unten:";
-"XtLibsPathLabelText" = "Pfad zum Ordner externer Ressourcen";
-"XtLibsDisclaimerText" = "WARNUNG: Dies ist eine Alpha-Version, sie kann instabil sein und Ihren Computer abstürzen lassen. Nutzung auf eigene Gefahr. Wenn der Patch angewendet wird, MÜSSEN SIE EINE NEUE FLASCHE FÜR DXMT ERSTELLEN";
-"GPTKToggle" = "D3DMetal (GPTK) integrieren";
-"ForcePatch" = "Patch erzwingen";
-"Instructions" = "Anweisungen";
-"InstructionsAskWhatDo" = "Was macht dieses Programm?";
-"InstructionsButtonText" = "Anweisungen";
-"InstructionsFunctionDescription" = "Dieser Patcher ändert Ihre CrossOver-Installation so, dass aktualisierte und optimierte Versionen von DXVK und MoltenVK verwendet werden, was in einigen Fällen die Kompatibilität oder Leistung einiger Spiele verbessert.";
-"InstructionsText" = "Stellen Sie sicher, dass Sie über eine unveränderte Release-Version von CrossOver verfügen, die Sie von Ihrer CodeWeavers-Kontoseite heruntergeladen haben. Stellen Sie sicher, dass CrossOver registriert und mindestens einmal ausgeführt wurde, um sicherzustellen, dass das neueste DXVK ordnungsgemäß aktiviert ist. Möglicherweise müssen Sie DXVK in CrossOver ein- und ausschalten. Sollte Ihre CrossOver-Installation aus irgendeinem Grund unbrauchbar werden, können Sie sie erneut von der CodeWeavers-Website herunterladen. Dieser Patcher nimmt keine dauerhaften Änderungen an Ihren CrossOver-Flaschen vor.";
-"PatchStatusAlreadyPatched" = "Diese CrossOver.app wurde bereits gepatcht!";
-"PatchStatusError" = "CrossOver.app konnte nicht gepatcht werden. Bitte stellen Sie sicher, dass Sie versuchen, die Release-Version von CrossOver %@ von der CodeWeavers-Website zu patchen.";
-"PatchStatusReady" = "Ziehen Sie Ihre CrossOver.app hierhin \noder klicken Sie hier, um sie im Finder auszuwählen";
-"PatchStatusSuccess" = "CrossOver.app wurde erfolgreich gepatcht";
-"RestoreButtonLabel" = "Wiederherstellen";
-"RestoreConfirm" = "Cool!";
-"RestoreFailure" = "Entweder ist diese CrossOver.app nicht gepatcht oder sie wurde mit einer inkompatiblen Version von CXPatcher gepatcht.";
-"RestoreStatusLabel" = "CrossOver.app wiederherstellen";
-"RestoreSuccess" = "CrossOver.app wurde erfolgreich wiederhergestellt.";
+"CrossOverPatcher" = "CXPatcher";
+"Credits" = "Danksagungen:";
+"CreditsText" = "Vielen Dank an die Entwickler hinter den DXVK- und MoltenVK-Patches für ihre großartige Hilfe und die Bereitstellung der Binärdateien.";
+"CreditsLinks" = "[@gcenx](https://github.com/Gcenx)\n[@nastys](https://github.com/nastys)";
 "GcenxURL" = "https://github.com/Gcenx";
 "nastysURL" = "https://github.com/nastys";
-"MediaFoundation" = "Damit die Media Foundation-Bibliotheken funktionieren, müssen Sie GStreamer installieren (Installation für alle Benutzer erforderlich).";
-"DownloadGStreamer" = "GStreamer herunterladen";
-"GStreamerInstalled" = "GStreamer ist bereits installiert";
+
+/* --- Disclaimers & Legal --- */
+"DisclaimerPleaseNoteLabelText" = "bitte beachten Sie:";
+"DisclaimerText" = "Dies ist ein inoffizielles Patch-Programm für CrossOver, an dessen Entwicklung CodeWeavers in keiner Weise beteiligt ist. Obwohl diese Software getestet wurde, kann sie dazu führen, dass Ihre CrossOver-Installation unbrauchbar oder instabil wird. BENUTZUNG AUF EIGENE GEFAHR. Durch die Verwendung dieses Patchers erlischt auch jegliche offizielle Unterstützung von CodeWeavers.\n\nSollten nach dem Patchen Ihrer Installation Probleme auftreten, können Sie eine neue Kopie von CrossOver von der CodeWeavers-Website herunterladen.";
+"CWWebsite" = "CodeWeavers unterstützt keine gepatchten oder geänderten CrossOver-Apps, siehe";
+"CrossOverDownloadURLText" = "CodeWeavers-Downloadseite";
+"CrossOverDownloadURL" = "https://codeweavers.com/account/downloads";
+"CWForums" = "CodeWeavers-Foren";
+"CWForumsURL" = "https://www.codeweavers.com/support/forums/general/?t=27;msg=257865";
 "waitFor" = "Wir warten darauf, dass Sie den Haftungsausschluss lesen und bestätigen";
-"confirmationValue" = "Ich werde CodeWeavers nicht um Unterstützung oder Rückerstattung bitten";
 "confirmation" = "Bitte geben Sie in das Eingabefeld unten „Ich werde CodeWeavers nicht um Unterstützung oder Rückerstattung bitten“ ein";
-"unsupported" = "nicht unterstützt";
-"bottlesPathToggle" = "Verwenden Sie einen separaten Flaschenweg";
+"confirmationValue" = "Ich werde CodeWeavers nicht um Unterstützung oder Rückerstattung bitten";
+
+/* --- Main Navigation & Buttons --- */
+"AgreeAndProceedButtonText" = "Zustimmen und Fortfahren";
+"continue" = "Weiter";
+"Options" = "Optionen";
 "optionsButtonText" = "Erweiterte Optionen";
-"options" = "Optionen";
-"MTLHUDToggle" = "METAL HUD immer aktiviert";
-"DisableFastMathToggle" = "Schnelle Mathematik deaktivieren";
-"DisableAutoUpdate" = "CrossOver-Auto-Update verhindern";
-"bottlesToggleHelp" = "Die Flaschen werden in einem anderen Ordner gespeichert. CrossOver wird nicht die mit dem Standard-CrossOver generierten Flaschen verwenden. Möglicherweise müssen Sie eine neue Flasche erstellen. Es gibt eine Option, um den Pfad anzupassen, in dem sich die Flaschen befinden.";
-"gptkToggleHelp" = "Aktualisiert die aktuellen Bibliotheken des Gameporting Toolkit";
+"toolsButtonText" = "Werkzeuge";
+"InstructionsButtonText" = "Anweisungen";
+
+/* --- Instructions --- */
+"Instructions" = "Anweisungen";
+"InstructionsAskWhatDo" = "Was macht dieses Programm?";
+"InstructionsFunctionDescription" = "Dieser Patcher ändert Ihre CrossOver-Installation so, dass aktualisierte und optimierte Versionen von DXVK und MoltenVK verwendet werden, was in einigen Fällen die Kompatibilität oder Leistung einiger Spiele verbessert.";
+"InstructionsText" = "Stellen Sie sicher, dass Sie über eine unveränderte Release-Version von CrossOver verfügen, die Sie von Ihrer CodeWeavers-Kontoseite heruntergeladen haben. Stellen Sie sicher, dass CrossOver registriert und mindestens einmal ausgeführt wurde, um sicherzustellen, dass das neueste DXVK ordnungsgemäß aktiviert ist. Möglicherweise müssen Sie DXVK in CrossOver ein- und ausschalten. Sollte Ihre CrossOver-Installation aus irgendeinem Grund unbrauchbar werden, können Sie sie erneut von der CodeWeavers-Website herunterladen. Dieser Patcher nimmt keine dauerhaften Änderungen an Ihren CrossOver-Flaschen vor.";
+
+/* --- Patching Status --- */
+"PatchStatusReady" = "Ziehen Sie Ihre CrossOver.app hierhin \noder klicken Sie hier, um sie im Finder auszuwählen";
+"PatchStatusSuccess" = "CrossOver.app wurde erfolgreich gepatcht";
+"PatchStatusAlreadyPatched" = "Diese CrossOver.app wurde bereits gepatcht!";
+"PatchStatusError" = "CrossOver.app konnte nicht gepatcht werden. Bitte stellen Sie sicher, dass Sie versuchen, die Release-Version von CrossOver %@ von der CodeWeavers-Website zu patchen.";
+"PatchStatusFileExists" = "Eine App mit dem Suffix _patched existiert bereits";
+"unsupported" = "nicht unterstützt";
+"ForcePatch" = "Patch erzwingen";
+
+/* --- Restore / Backup --- */
+"RestoreButtonLabel" = "Wiederherstellen";
+"RestoreStatusLabel" = "CrossOver.app wiederherstellen";
+"RestoreConfirm" = "Cool!";
+"RestoreSuccess" = "CrossOver.app wurde erfolgreich wiederhergestellt.";
+"RestoreFailure" = "Entweder ist diese CrossOver.app nicht gepatcht oder sie wurde mit einer inkompatiblen Version von CXPatcher gepatcht.";
+"hasAlreadyBackup" = "Ich kann kein Backup der App erstellen. Bitte stelle sicher, dass sich keine Kopien von Crossover_original.app in deinem App-Ordner befinden, und versuche es erneut.";
+
+/* --- Features: MoltenVK --- */
+"Patch MoltenVK" = "Patch MoltenVK";
 "mkvToggleHelp" = "Aktualisiert die MoltenVK-Bibliotheken (mit dem UE4 Hack)";
-"dxvkToggleHelp" = "Aktualisiert die DXVK-Bibliotheken";
-"signatureToggleHelp" = "Entfernt die App-Signatur, um GateKeeper-Probleme zu beheben (die App wird mit einem Rechtsklick geöffnet)";
-"autoUpdateToggleHelp" = "Deaktiviert die Update-Überprüfung von CrossOver";
-"fastMathToggleHelp" = "Behebt einige Darstellungsprobleme bei einigen Spielen, die DXVK verwenden (LANGSAMER) für alle Flaschen";
-"advertiseAVXToggle" = "Immer AVX bewerben";
-"advertiseAVXToggleHelp" = "Dies zwingt rosetta dazu, AVX zu bewerben, anstatt es nur bei Bedarf zu verwenden (einige Spiele wie Yakuza benötigen das zum Laufen). Kann einige Spiele zum Laufen bringen, aber möglicherweise andere Spiele verlangsamen oder beschädigen. Wenn Sie sich nicht sicher sind, lassen Sie es ungeprüft";
-"hudToggleHelp" = "Aktiviert das Metal Hud für alle Flaschen";
 "MVKdontPatch" = "Nicht patchen";
 "MVKbaseline" = "Basis MVK + UE4 Hack";
 "MVKlatest" = "Neueste MVK + UE4-Hack";
 "MVKexperimental" = "Experimentelle MVK + UE4-Hack";
+
+/* --- Features: DXVK --- */
+"Patch DXVK" = "Patch DXVK";
+"dxvkToggleHelp" = "Aktualisiert die DXVK-Bibliotheken";
 "DXVKAsyncToggle" = "DXVK Asynchron";
 "DXVKAsyncToggleHelp" = "Aktiviert die asynchrone Kompilierung von DXVK-Shadern";
-"continue" = "Weiter";
+
+/* --- Features: GPTK / D3DMetal / MetalFX --- */
+"GPTKToggle" = "D3DMetal (GPTK) integrieren";
+"gptkToggleHelp" = "Aktualisiert die aktuellen Bibliotheken des Gameporting Toolkit";
+"enableExpMtlFX" = "enableExpMtlFX";
+"installExpMtlFXhelp" = "installExpMtlFXhelp";
+"metalFXSpatial" = "Metal FX Räumlich";
+"metalFXSpatialHelp" = "Aktiviert den MetalFX-räumlichen Upscaler in der Ausgabekette. Standardmäßig verdoppelt er die Ausgaberesolution.";
+"metalSpatialUpscaleFactor" = "Skalierungsfaktor: %@";
+
+/* --- Features: DXMT / External Libraries --- */
+"XtLibsLabel" = "Externes Framework installieren";
+"XtLibsToggle" = "DXMT installieren";
+"ExternalsToggleHelp" = "ExternalsToggleHelp";
+"XtLibsButtonText" = "DXMT-Ordner finden";
+"XtLibsLocateText" = "Finden Sie den DXMT-Ordner mit der Schaltfläche unten:";
+"XtLibsPathLabelText" = "Pfad zum Ordner externer Ressourcen";
+"XtLibsDisclaimerText" = "WARNUNG: Dies ist eine Alpha-Version, sie kann instabil sein und Ihren Computer abstürzen lassen. Nutzung auf eigene Gefahr. Wenn der Patch angewendet wird, MÜSSEN SIE EINE NEUE FLASCHE FÜR DXMT ERSTELLEN";
+"DXMTOptions" = "DXMT-Optionen";
+
+/* --- Features: GStreamer --- */
+"Patch GStreamer" = "Patch GStreamer";
+"GStreamerToggleHelp" = "GStreamerToggleHelp";
+"MediaFoundation" = "Damit die Media Foundation-Bibliotheken funktionieren, müssen Sie GStreamer installieren (Installation für alle Benutzer erforderlich).";
+"DownloadGStreamer" = "GStreamer herunterladen";
+"GStreamerInstalled" = "GStreamer ist bereits installiert";
+
+/* --- System / App Management --- */
+"AllowRepatchUpgradeToggle" = "Repatch/Upgrade zulassen";
+"Remove signature" = "Remove signature";
+"signatureToggleHelp" = "Entfernt die App-Signatur, um GateKeeper-Probleme zu beheben (die App wird mit einem Rechtsklick geöffnet)";
+"DisableAutoUpdate" = "CrossOver-Auto-Update verhindern";
+"autoUpdateToggleHelp" = "Deaktiviert die Update-Überprüfung von CrossOver";
+"bottlesPathToggle" = "Verwenden Sie einen separaten Flaschenweg";
+"bottlesToggleHelp" = "Die Flaschen werden in einem anderen Ordner gespeichert. CrossOver wird nicht die mit dem Standard-CrossOver generierten Flaschen verwenden. Möglicherweise müssen Sie eine neue Flasche erstellen. Es gibt eine Option, um den Pfad anzupassen, in dem sich die Flaschen befinden.";
+
+/* --- Environment Globals (Advanced) --- */
+"Environment Globals" = "Environment Globals";
+"advertiseAVXToggle" = "Immer AVX bewerben";
+"advertiseAVXToggleHelp" = "Dies zwingt rosetta dazu, AVX zu bewerben, anstatt es nur bei Bedarf zu verwenden (einige Spiele wie Yakuza benötigen das zum Laufen). Kann einige Spiele zum Laufen bringen, aber möglicherweise andere Spiele verlangsamen oder beschädigen. Wenn Sie sich nicht sicher sind, lassen Sie es ungeprüft";
+"DisableFastMathToggle" = "Schnelle Mathematik deaktivieren";
+"fastMathToggleHelp" = "Behebt einige Darstellungsprobleme bei einigen Spielen, die DXVK verwenden (LANGSAMER) für alle Flaschen";
+"MTLHUDToggle" = "METAL HUD immer aktiviert";
+"hudToggleHelp" = "Aktiviert das Metal Hud für alle Flaschen";
+"DisableUE4HackToggle" = "DisableUE4HackToggle";
+"DisableUE4HackToggleHelp" = "DisableUE4HackToggleHelp";
+"preferredMaxFrameRate" = "Maximale Bildrate: %@";
+"preferredMaxFrameRateHelp" = "Kann so eingestellt werden, dass das Bildtempo der Anwendung von Metal gesteuert wird. Der Wert muss ein Vielfaches der Bildwiederholrate Ihres Displays sein (z. B. sind 15/30/40/60/120 für ein 120-Hz-Display gültig).";
+
+/* --- Tools: Cache Management --- */
 "d3dMetalCache" = "D3dMetal-Cache";
 "clearD3dmetalCache" = "Löschen";
 "ShowD3dmetalCacheFolder" = "Ordner anzeigen";
-"findSteamCaches" = "Steam-Caches finden";
 "d3dmetalCacheDeleted" = "Alle D3dMetal-Caches wurden gelöscht";
 "d3dmetalCacheDeleteFailed" = "Löschen des D3dMetal-Caches fehlgeschlagen";
+"findSteamCaches" = "Steam-Caches finden";
 "scanningSteamFolders" = "Scannen von Steam-Cache-Ordnern";
 "clickFindSteamCaches" = "Klicken Sie hier, um Steam-Cache-Ordner zu scannen";
 "steamCacheDeleted" = "Der ausgewählte Steam-Cache-Ordner wurde gelöscht";
 "steamCacheDeleteFailed" = "Löschen des ausgewählten Steam-Caches fehlgeschlagen";
 "steamCacheDeleteInProgress" = "Löschen des ausgewählten Steam-Caches";
-"toolsButtonText" = "Werkzeuge";
-"DXMTOptions" = "DXMT-Optionen";
-"preferredMaxFrameRate" = "Maximale Bildrate: %@";
-"preferredMaxFrameRateHelp" = "Kann so eingestellt werden, dass das Bildtempo der Anwendung von Metal gesteuert wird. Der Wert muss ein Vielfaches der Bildwiederholrate Ihres Displays sein (z. B. sind 15/30/40/60/120 für ein 120-Hz-Display gültig).";
-"metalFXSpatial" = "Metal FX Räumlich";
-"metalFXSpatialHelp" = "Aktiviert den MetalFX-räumlichen Upscaler in der Ausgabekette. Standardmäßig verdoppelt er die Ausgaberesolution.";
-"metalSpatialUpscaleFactor" = "Skalierungsfaktor: %@";
-"hasAlreadyBackup" = "Ich kann kein Backup der App erstellen. Bitte stelle sicher, dass sich keine Kopien von Crossover_original.app in deinem App-Ordner befinden, und versuche es erneut.";
-"PatchStatusFileExists" = "Eine App mit dem Suffix _patched existiert bereits";

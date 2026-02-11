@@ -34,7 +34,7 @@ final class CrossoverCompatibilityTests: XCTestCase {
     }
 
     func testExternalResourcesRootTargetsAppleGptk() {
-        XCTAssertEqual(EXTERNAL_RESOURCES_ROOT, "/lib64/apple_gptk")
+        XCTAssertEqual(EXTERNAL_RESOURCES_DEST_ROOT, "/lib64/apple_gptk")
     }
 
     func testDxvkPathTargetsV26LayoutOnly() {

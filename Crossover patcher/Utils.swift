@@ -70,8 +70,9 @@ var f = FileManager()
 
 private func getResourcesListFrom(url: URL) -> [(String, String)]{
     let list: [(String, String)]  = WINE_RESOURCES_PATHS.map { path in
-        (
-            WINE_RESOURCES_ROOT + path,
+        let sourcePath = RESOURCE_SOURCE_OVERRIDES[path] ?? path
+        return (
+            WINE_RESOURCES_ROOT + sourcePath,
             url.path + SHARED_SUPPORT_PATH + path
         )
     }
@@ -88,8 +89,8 @@ private func getDisableListFrom(url: URL) -> [String]{
 private func getExternalResourcesList(url: URL) -> [(String, String)]{
     return EXTERNAL_WINE_PATHS.map { path in
         (
-            "Crossover" + EXTERNAL_RESOURCES_ROOT + path,
-            url.path + SHARED_SUPPORT_PATH + EXTERNAL_RESOURCES_ROOT + path
+            WINE_RESOURCES_ROOT + EXTERNAL_RESOURCES_SOURCE_ROOT + path,
+            url.path + SHARED_SUPPORT_PATH + EXTERNAL_RESOURCES_DEST_ROOT + path
         )
     }
 }
@@ -103,7 +104,7 @@ private func  getBackupListFrom(url: URL) -> [String] {
 
 private func  getExternalBackupListFrom(url: URL) -> [String] {
     let externalRes = EXTERNAL_WINE_PATHS.map { path in
-        url.path + SHARED_SUPPORT_PATH + path + "_orig"
+        url.path + SHARED_SUPPORT_PATH + EXTERNAL_RESOURCES_DEST_ROOT + path + "_orig"
     }
     return externalRes
 }
@@ -120,30 +121,41 @@ private func resCopy(res: String, dest: String) {
     }
 }
 
-private func safeResCopy(res: String, dest: String) {
-//    print("moving \(dest + maybeExt(ext))")
-    if(f.fileExists(atPath: dest)) {
-        do {try f.moveItem(atPath: dest, toPath: dest + "_orig")
-        } catch {
-            print("\(dest) does not exist!")
-        }
-    } else {
-        print("unexpected error: \(dest) doesn't have an original copy will just copy then")
+private func backupOriginalIfNeeded(dest: String) {
+    let backupPath = dest + "_orig"
+    if f.fileExists(atPath: backupPath) {
+        return
     }
+    guard f.fileExists(atPath: dest) else {
+        return
+    }
+    do {
+        try f.moveItem(atPath: dest, toPath: backupPath)
+    } catch {
+        print("can't create backup for \(dest): \(error)")
+    }
+}
+
+private func removeFileIfExists(path: String) {
+    guard f.fileExists(atPath: path) else {
+        return
+    }
+    do {
+        try f.removeItem(atPath: path)
+    } catch {
+        print("can't remove file \(path): \(error)")
+    }
+}
+
+private func safeResCopy(res: String, dest: String) {
+    backupOriginalIfNeeded(dest: dest)
+    removeFileIfExists(path: dest)
     resCopy(res: res, dest: dest)
 }
 
 private func safeFileCopy(source: String, dest: String) {
-//    print("moving \(dest + maybeExt(ext))")
-    if(f.fileExists(atPath: dest)) {
-        do {try f.moveItem(atPath: dest, toPath: dest + "_orig")
-        } catch {
-            print("\(dest) does not exist!")
-        }
-    } else {
-        print("file doesn't exist I'll just copy then")
-    }
-
+    backupOriginalIfNeeded(dest: dest)
+    removeFileIfExists(path: dest)
     do { try f.copyItem(at: URL(filePath: source), to: URL(filePath: dest))
         print("\(source) copied")
     } catch {
@@ -174,18 +186,34 @@ private func restoreFile(dest: String) {
 }
 
 private func disable(dest: String) {
-    do {try f.moveItem(atPath: dest, toPath: dest  + "_disabled")
+    let disabledPath = dest + "_disabled"
+    if f.fileExists(atPath: disabledPath) {
+        print("already disabled \(dest)")
+        return
+    }
+    guard f.fileExists(atPath: dest) else {
+        print("skip missing file \(dest)")
+        return
+    }
+    do {
+        try f.moveItem(atPath: dest, toPath: disabledPath)
         print("disabling \(dest)")
     } catch {
-        print("can't move file \(dest)")
+        print("can't move file \(dest): \(error)")
     }
 }
 
 private func enable(dest: String) {
-    do {try f.moveItem(atPath: dest + "_disabled", toPath: dest)
-        print("disabling \(dest)")
+    let disabledPath = dest + "_disabled"
+    guard f.fileExists(atPath: disabledPath) else {
+        print("skip restore missing disabled file \(dest)")
+        return
+    }
+    do {
+        try f.moveItem(atPath: disabledPath, toPath: dest)
+        print("enabling \(dest)")
     } catch {
-        print("can't move file \(dest)")
+        print("can't move file \(dest): \(error)")
     }
 }
 
@@ -205,25 +233,45 @@ struct CXPlist: Decodable {
     let CFBundleShortVersionString: String
 }
 
-func parseCXPlist(plistPath: String) -> CXPlist {
-    let data = try! Data(contentsOf: URL(filePath: plistPath))
-    let decoder = PropertyListDecoder()
-    return try! decoder.decode(CXPlist.self, from: data)
+func parseCXPlist(plistPath: String) -> CXPlist? {
+    do {
+        let data = try Data(contentsOf: URL(filePath: plistPath))
+        let decoder = PropertyListDecoder()
+        return try decoder.decode(CXPlist.self, from: data)
+    } catch {
+        print("failed to parse plist at \(plistPath): \(error)")
+        return nil
+    }
 }
 
-func isCrossoverApp(url: URL, version: String? = nil, skipVersionCheck: Bool? = false) -> Bool {
-    let plistPath = url.path + "/Contents/Info.plist"
-    if (f.fileExists(atPath: plistPath)) {
-        let plist = parseCXPlist(plistPath: plistPath)
-        if (plist.CFBundleIdentifier == "com.codeweavers.CrossOver" && skipVersionCheck == true) {
-            return true
-        }
-        if (plist.CFBundleIdentifier == "com.codeweavers.CrossOver" && plist.CFBundleShortVersionString.starts(with: SUPPORTED_CROSSOVER_VERSION) ) {
-            print("app version is ok: \(plist.CFBundleShortVersionString)")
-            return true
-        }
+func isSupportedCrossoverVersion(_ version: String) -> Bool {
+    guard let major = Int(version.split(separator: ".").first ?? "") else {
+        return false
     }
-    print("file doesn't exist at \(plistPath)")
+    return major == SUPPORTED_CROSSOVER_MAJOR_VERSION
+}
+
+func isCrossoverApp(url: URL, skipVersionCheck: Bool? = false) -> Bool {
+    let plistPath = url.path + "/Contents/Info.plist"
+    guard f.fileExists(atPath: plistPath) else {
+        print("missing Info.plist at \(plistPath)")
+        return false
+    }
+    guard let plist = parseCXPlist(plistPath: plistPath) else {
+        return false
+    }
+    guard plist.CFBundleIdentifier == "com.codeweavers.CrossOver" else {
+        print("unsupported bundle id: \(plist.CFBundleIdentifier)")
+        return false
+    }
+    if skipVersionCheck == true {
+        return true
+    }
+    if isSupportedCrossoverVersion(plist.CFBundleShortVersionString) {
+        print("app version is ok: \(plist.CFBundleShortVersionString)")
+        return true
+    }
+    print("unsupported version: \(plist.CFBundleShortVersionString), expected major \(SUPPORTED_CROSSOVER_MAJOR_VERSION)")
     return false
 }
 
@@ -300,7 +348,7 @@ func getTextBy(status: Status) -> String {
 }
 
 func getExternalPathFrom(url: URL) -> String {
-    return url.path + SHARED_SUPPORT_PATH + EXTERNAL_RESOURCES_ROOT
+    return url.path + SHARED_SUPPORT_PATH + EXTERNAL_RESOURCES_DEST_ROOT
 }
 
 func hasExternal(url: URL) -> Bool{
@@ -328,8 +376,15 @@ func patch(url: URL, opts: inout Opts) {
         opts.patchDXVK ? true : (!elem.0.contains("dxvk") && !elem.0.contains("dxvk"))
     }
     opts.progress += 1
-    let filesToDisable = getDisableListFrom(url: url).filter { elem in
+    let allFilesToDisable = getDisableListFrom(url: url).filter { elem in
         opts.removeSignaure ? true : (!elem.contains("CodeResources") && !elem.contains("_CodeSignature"))
+    }
+    let filesToDisable = allFilesToDisable.filter { elem in
+        f.fileExists(atPath: elem) || f.fileExists(atPath: elem + "_disabled")
+    }
+    let missingDisableFileCount = allFilesToDisable.count - filesToDisable.count
+    if missingDisableFileCount > 0 {
+        print("skipping \(missingDisableFileCount) missing optional files")
     }
     opts.progress += 1
     if(opts.copyGptk == true) {

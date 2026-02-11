@@ -21,14 +21,15 @@ let ENABLE_RESTORE = false
 let ENABLE_REPATCH_TOGGLE = ENABLE_RESTORE
 let ENABLE_BACKUP = !ENABLE_RESTORE
 
-let SUPPORTED_CROSSOVER_VERSION = "23.7"
+let SUPPORTED_CROSSOVER_MAJOR_VERSION = 26
 let ENABLE_GSTREAMER = true
 
 let SHARED_SUPPORT_PATH = "/Contents/SharedSupport/CrossOver"
 let DEFAULT_CX_BOTTLES_PATH = "/Users/${USER}/CXPBottles"
 let LIB_PATH = "/lib/"
 
-let EXTERNAL_RESOURCES_ROOT = "/lib64/apple_gpt"
+let EXTERNAL_RESOURCES_SOURCE_ROOT = "/lib64/apple_gpt"
+let EXTERNAL_RESOURCES_DEST_ROOT = "/lib64/apple_gptk"
 let EXTERNAL_WINE_PATHS: [String] = [
     "/external",
     "/wine/x86_64-unix/atidxx64.so",
@@ -219,14 +220,11 @@ let MOLTENVK_BASELINE = "/lib64/libMoltenVK.dylib"
 
 let WINE_RESOURCES_PATHS: [String] = [
     MOLTENVK_BASELINE,
-    "/lib64/libinotify.0.dylib",
-    "/lib64/libinotify.dylib",
-    "/lib64/wine/dxvk",
-    "/lib/wine/dxvk",
+    "/lib/dxvk",
     "/lib/wine/i386-windows/kernelbase.dll",
     "/lib/wine/i386-windows/ntdll.dll",
     "/lib/wine/i386-windows/winegstreamer.dll",
-    "lib/wine/i386-windows/wineboot.exe",
+    "/lib/wine/i386-windows/wineboot.exe",
     "/lib/wine/i386-windows/winecfg.exe",
     "/lib/wine/x86_64-unix/ntdll.so",
     "/lib/wine/x86_64-unix/winegstreamer.so",
@@ -238,6 +236,10 @@ let WINE_RESOURCES_PATHS: [String] = [
     "/share/crossover/bottle_data/crossover.inf",
     "/CrossOver-Hosted Application/wineserver",
     "/share/wine/wine.inf",
+]
+
+let RESOURCE_SOURCE_OVERRIDES: [String: String] = [
+    "/lib/dxvk": "/lib/wine/dxvk",
 ]
 
 let MOLTENVK_LATEST = "/lib64/libMoltenVK-latest.dylib"

@@ -47,4 +47,16 @@ final class CrossoverCompatibilityTests: XCTestCase {
         let nonAbsolute = WINE_RESOURCES_PATHS.filter { !$0.hasPrefix("/") }
         XCTAssertTrue(nonAbsolute.isEmpty, "Found non-absolute paths: \(nonAbsolute)")
     }
+
+    func testInstalledCrossOver26LayoutWhenAvailable() throws {
+        let installedApp = URL(fileURLWithPath: "/Applications/CrossOver.app", isDirectory: true)
+        guard FileManager.default.fileExists(atPath: installedApp.path) else {
+            throw XCTSkip("CrossOver.app is not installed on this machine")
+        }
+
+        XCTAssertTrue(isCrossoverApp(url: installedApp, skipVersionCheck: false))
+        XCTAssertTrue(FileManager.default.fileExists(atPath: installedApp.path + SHARED_SUPPORT_PATH + EXTERNAL_RESOURCES_DEST_ROOT))
+        XCTAssertTrue(FileManager.default.fileExists(atPath: installedApp.path + SHARED_SUPPORT_PATH + "/lib/dxvk"))
+        XCTAssertTrue(FileManager.default.fileExists(atPath: installedApp.path + SHARED_SUPPORT_PATH + BOTTLE_PATH_OVERRIDE))
+    }
 }

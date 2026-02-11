@@ -26,9 +26,8 @@ For more info: [https://www.codeweavers.com/support/forums/general/?t=27;msg=257
 - CXPatcher up to 0.3 will support only 22.x.x
 - CXPatcher from 0.4 on will support 23.x.x
 - CXPatcher from 0.5 on will support 24.x.x
-- CXPatcher from 0.6 on will support 25.x.x
-and so on...
-(keep an eye on the specific version)
+- CXPatcher from 0.6 on will support 26.x.x
+Current branch support target: 26.x.x only
 
 ## What macOS does it support
 

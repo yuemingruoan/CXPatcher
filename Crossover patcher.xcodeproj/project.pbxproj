@@ -37,10 +37,23 @@
 		38F7B21D2A5DD4E100CD9511 /* IntegrateExternalsToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7B21C2A5DD4E100CD9511 /* IntegrateExternalsToggle.swift */; };
 		38F7B21F2A5DD58600CD9511 /* SkipVersionCheckToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7B21E2A5DD58600CD9511 /* SkipVersionCheckToggle.swift */; };
 		38F7B2212A5DD60000CD9511 /* RepatchToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7B2202A5DD60000CD9511 /* RepatchToggle.swift */; };
+		8362869C267FDD6283DF10F7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17CB53D2D06787630F1F86C /* Cocoa.framework */; };
+		B54874C612720A540735989B /* CrossoverCompatibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767B324D312C6B0C98303C3B /* CrossoverCompatibilityTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		432D200C97B59FB87138A82E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38ACB38929D773CA00A450A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38ACB39029D773CA00A450A0;
+			remoteInfo = CXPatcher;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0D9AC2C32A49F96000101F43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E724FF73C07F0EB2747BC09 /* CXPatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CXPatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		382499E32AEE946400578AA3 /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		382499E52AEE984600578AA3 /* OptionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsButton.swift; sourceTree = "<group>"; };
 		382AC3162AF8246800097003 /* AutoUpdateDisableToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoUpdateDisableToggle.swift; sourceTree = "<group>"; };
@@ -86,7 +99,20 @@
 		38FC40112A606ACB006E6A69 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38FC40122A606AD8006E6A69 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
 		38FC40132A606BAE006E6A69 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		767B324D312C6B0C98303C3B /* CrossoverCompatibilityTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossoverCompatibilityTests.swift; path = CrossoverCompatibilityTests.swift; sourceTree = "<group>"; };
+		A17CB53D2D06787630F1F86C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55A5158F9B1F488241E72EC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8362869C267FDD6283DF10F7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		38ACB38829D773CA00A450A0 = {
@@ -95,6 +121,8 @@
 				3851266D2AC87E7A0067C568 /* CXPatcherDebug.entitlements */,
 				38ACB39329D773CA00A450A0 /* Crossover patcher */,
 				38ACB39229D773CA00A450A0 /* Products */,
+				CF6DAD80A2A5463EBAAC0B85 /* Frameworks */,
+				9BB3DE64614301CB2DD97667 /* CXPatcherTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				38ACB39129D773CA00A450A0 /* CXPatcher.app */,
+				2E724FF73C07F0EB2747BC09 /* CXPatcherTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,6 +223,31 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		9BB3DE64614301CB2DD97667 /* CXPatcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				767B324D312C6B0C98303C3B /* CrossoverCompatibilityTests.swift */,
+			);
+			name = CXPatcherTests;
+			path = CXPatcherTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		B59F98196CDE740A2A176014 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				A17CB53D2D06787630F1F86C /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		CF6DAD80A2A5463EBAAC0B85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B59F98196CDE740A2A176014 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +267,24 @@
 			productName = "Crossover patcher";
 			productReference = 38ACB39129D773CA00A450A0 /* CXPatcher.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7B7EE2EC14CFEEB4663573F8 /* CXPatcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FE25DCB2F05BAD96365E056 /* Build configuration list for PBXNativeTarget "CXPatcherTests" */;
+			buildPhases = (
+				008D56B9C9AD1B34A6D27D28 /* Sources */,
+				55A5158F9B1F488241E72EC5 /* Frameworks */,
+				7C06E3841A0D216B8AA68A08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				398EF061D258B79A96693B17 /* PBXTargetDependency */,
+			);
+			name = CXPatcherTests;
+			productName = CXPatcherTests;
+			productReference = 2E724FF73C07F0EB2747BC09 /* CXPatcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -254,6 +326,7 @@
 			projectRoot = "";
 			targets = (
 				38ACB39029D773CA00A450A0 /* CXPatcher */,
+				7B7EE2EC14CFEEB4663573F8 /* CXPatcherTests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,6 +339,13 @@
 				0D9AC2C22A49F96000101F43 /* Localizable.strings in Resources */,
 				38EDDA382A97A73D00FF2254 /* CrossOver in Resources */,
 				38C678A229DAEF8500EB19BE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C06E3841A0D216B8AA68A08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +373,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		008D56B9C9AD1B34A6D27D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B54874C612720A540735989B /* CrossoverCompatibilityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		38ACB38D29D773CA00A450A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +416,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		398EF061D258B79A96693B17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CXPatcher;
+			target = 38ACB39029D773CA00A450A0 /* CXPatcher */;
+			targetProxy = 432D200C97B59FB87138A82E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0D9AC2C42A49F96000101F43 /* Localizable.strings */ = {
@@ -556,6 +653,46 @@
 			};
 			name = Release;
 		};
+		9973F089EDF2CB1E95AC8DC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.italomandara.Crossover-patcher.tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CXPatcher.app/Contents/MacOS/CXPatcher";
+				TEST_TARGET_NAME = CXPatcher;
+			};
+			name = Debug;
+		};
+		DCE004B8C8E4DDDA0DBB23A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.italomandara.Crossover-patcher.tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CXPatcher.app/Contents/MacOS/CXPatcher";
+				TEST_TARGET_NAME = CXPatcher;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +710,15 @@
 			buildConfigurations = (
 				38ACB3A129D773CA00A450A0 /* Debug */,
 				38ACB3A229D773CA00A450A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FE25DCB2F05BAD96365E056 /* Build configuration list for PBXNativeTarget "CXPatcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCE004B8C8E4DDDA0DBB23A3 /* Release */,
+				9973F089EDF2CB1E95AC8DC0 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
